@@ -1,0 +1,55 @@
+site_name: UNT Talon Hight-Performance Computing Documentation
+
+nav:
+    - Home: index.md
+    - About: about.md
+    - Standard Operating Procedure Guide: UNT-RITS.github.io/talon_sop/_build/html/index.html
+
+repo_name: UNT-RITS
+repo_url: https://github.com/UNT-RITS
+
+extra:
+    manifest: manifest.webmanifest
+    
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+
+markdown_extensions:
+    - footnotes
+    - admonition
+    - codehilite:
+        guess_lang: true
+        linenums: true
+    - toc:
+        permalink: true
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tabbed
+    - pymdownx.tilde
+    
+    
+theme:
+    logo: images/logo.svg
+    language: en
+    features:
+        - instant
+        - tabs
+    name: material
+    palette:
+        primary: green
+    font: true
+        
