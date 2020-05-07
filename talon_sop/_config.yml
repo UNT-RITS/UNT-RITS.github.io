@@ -1,0 +1,8 @@
+# Book settings
+title: Talon Standard Operating Procedure
+author: UNT RITS
+logo: '../images/logo.png'
+
+latex:
+  latex_documents:
+    targetname: book.tex
