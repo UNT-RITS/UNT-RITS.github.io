@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to Talon Standard Operating Procedure Guide &#8212; Talon Standard Operating Procedure</title>
+    <title>Talon Standard Operating Procedure</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -29,7 +29,6 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Talon3 Cluster Overview" href="1_talon_cluster_overview.html" />
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,8 +57,6 @@
   <img src="_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Talon Standard Operating Procedure</h1>
-  
 </a>
 </div>
 
@@ -72,19 +69,7 @@
   
   <ul class="nav sidenav_l1">
   <li class="active">
-    <a href="#">Welcome to Talon Standard Operating Procedure Guide</a>
-  </li>
-  <li class="">
-    <a href="1_talon_cluster_overview.html">Talon3 Cluster Overview</a>
-  </li>
-  <li class="">
-    <a href="2_bright_cluster_configuration.html">Bright Cluster configuration</a>
-  </li>
-  <li class="">
-    <a href="3_adding_new_nodes.html">Adding new nodes</a>
-  </li>
-  <li class="">
-    <a href="4_slurm.html">Slurm</a>
+    <a href="0_intro.html#document-0_intro">Welcome to Talon Standard Operating Procedure Guide</a>
   </li>
 </ul>
 </nav>
@@ -111,15 +96,6 @@
         <div class="dropdown-buttons-trigger">
             <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
 
-            
-            <div class="dropdown-buttons">
-                <!-- ipynb file if we had a myst markdown file -->
-                
-                <!-- Download raw file -->
-                <a class="dropdown-buttons" href="_sources/0_intro.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
-                <!-- Download PDF via print -->
-                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-            </div>
             
         </div>
 
@@ -184,6 +160,102 @@ structured.</p>
 <div class="section" id="other-stuff">
 <h2>Other stuff<a class="headerlink" href="#other-stuff" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
+<span id="document-1_talon_cluster_overview"></span><div class="section" id="talon3-cluster-overview">
+<h3>Talon3 Cluster Overview<a class="headerlink" href="#talon3-cluster-overview" title="Permalink to this headline">¶</a></h3>
+<p>•    Authors</p>
+<p>Created by  Charles Peterson 12/2016<br />
+Modified by  Yuguang Ma     8/2017</p>
+<p>•    Purpose</p>
+<p>This doc contains the overall configuration information of the Talon3 cluster.</p>
+<p>•    Introduction</p>
+<p>The new Talon (Talon3) is a heterogeneous cluster running CentOS and using Bright as the cluster management software and SLURM as the batch-queuing system. Current software versions on Talon3 are CentOS 7.3, Bright 7.3, and SLURM 16.05.</p>
+<p>Talon3 contains 9 administration nodes, including 2 head nodes, 2 login nodes, 3 vis nodes and 2 NFS nodes, and 355 compute nodes with various models. Besides these, we also maintain some compute nodes of several research groups. A brief list of the nodes can be fould in the following tables:</p>
+<p>Administration nodes:</p>
+</div>
+<span id="document-2_bright_cluster_configuration"></span><div class="section" id="bright-cluster-configuration">
+<h3>Bright Cluster configuration<a class="headerlink" href="#bright-cluster-configuration" title="Permalink to this headline">¶</a></h3>
+<p>•    Authors
+Created by                                                                                                                                                             Charles Peterson 12/2016<br />
+Modified by                                                                                                                                                             Yuguang Ma  08/2017</p>
+<p>•    Purpose
+Setup configuration for Talon3 with Bright</p>
+<p>•    Procedure</p>
+<p>Head nodes
+The Head nodes for Talon3 are R630 nodes:
+location on the UNT network: t3-head.hpc.unt.edu</p>
+<p>There are two head nodes for Talon3. High Availability (HA) is in use with have the two head nodes to act as a failover pair.
+t3-head1 – located on rack 13, rank XX
+t3-head2 – located on rack 13, rank XX</p>
+<p>Network Interfaces:
+1Gb:
+eth0 – internal network for management(10.1.XXX.XXX)
+eth1 – UNT network, Internet (129.120.220.XXX)
+10GB (with adapter):
+eth2
+eth3</p>
+</div>
+<span id="document-3_adding_new_nodes"></span><div class="section" id="adding-new-nodes">
+<h3>Adding new nodes<a class="headerlink" href="#adding-new-nodes" title="Permalink to this headline">¶</a></h3>
+<p>•    Authors
+Created by                                                                                                                                                             Charles Peterson 03/2017<br />
+Modified by                                                                                                                                                             XXXXXXXXXX</p>
+<p>•    Purpose
+Adding new nodes to the Talon3 cluster</p>
+<p>•    Procedure</p>
+<p>You can do this either though cmgui or cmsh</p>
+<p>With cmgui,
+Create a new node under the ‘Nodes’ Tab.
+Modify hostame
+added it to a node catgory
+Enter the Network values
+Name: BOOTIF (internal Talon3 network)
+Type: Physical
+Network: internalnet (10.1.0.0/16)
+IP: 10.1.xxx.xxx</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Name: ib0 (the IB network)
+Type: Physical
+Network: ibnetnet (10.11.0.0/16)
+IP: 10.11.xxx.xxx
+
+Name: ipmi0 (IPMI/BMC network 
+Type: BMC (IPMI)
+Network: ipminet (10.2.0.0/16)
+IP: 10.2.xxx.xxx
+</pre></div>
+</div>
+<p>Boot the node and PXE boot
+MAKE SURE TO CHANGE THE iDRAC NETWORK FROM THE DEDICATED PORT TO LOM1. You will need to go into the BIOS, into the system setting (F2) and go to the iDRAC network settings.</p>
+</div>
+<span id="document-4_slurm"></span><div class="section" id="slurm">
+<h3>Slurm<a class="headerlink" href="#slurm" title="Permalink to this headline">¶</a></h3>
+<p>•    Authors
+Created by                                                                                                                                                             Charles Peterson 011/2016<br />
+Modified by                                                                                                                                                             XXXXXXXXXX</p>
+<p>•    Purpose
+The use of Slurm on Talon3</p>
+<p>•    Procedure</p>
+<p>Setting up Slurm
+[root&#64;bright73 ~]# wlm-setup -w slurm -s</p>
+<p>Multifactor Priority
+Default is FIFO
+Change the Multifactor in /etc/slurm/slurm.conf</p>
+</div>
+<div class="section" id="scheduling">
+<h3>SCHEDULING<a class="headerlink" href="#scheduling" title="Permalink to this headline">¶</a></h3>
+<p>PriorityType=priority/multifactor
+PriorityUsageResetPeriod=1-0
+PriorityWeightFairshare=100000
+PriorityWeightAge=1000
+PriorityWeightPartition=10000
+PriorityWeightJobSize=1000
+PriorityMaxAge=14-0
+PriorityDecayHalfLife=0
+PriorityFavorSmall=NO
+PriorityWeightQOS=0
+PriorityWeightPartition=1000</p>
+<p>Queues
+scontrol show partitions</p>
+</div>
 </div>
 </div>
 </div>
@@ -197,7 +269,6 @@ structured.</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="1_talon_cluster_overview.html" title="next page">Talon3 Cluster Overview</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
