@@ -3,7 +3,7 @@ site_name: UNT Talon Hight-Performance Computing Documentation
 nav:
     - Home: index.md
     - About: about.md
-    - Standard Operating Procedure Guide: UNT-RITS.github.io/talon_sop/_build/html/index.html
+    - Standard Operating Procedure Guide: http://UNT-RITS.github.io/talon_sop/_build/html/index.html 
 
 repo_name: UNT-RITS
 repo_url: https://github.com/UNT-RITS
