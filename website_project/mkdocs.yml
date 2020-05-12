@@ -1,21 +1,39 @@
 site_name: UNT Talon Hight-Performance Computing Documentation
 
 nav:
-    - Home: index.md
-    - About: about.md
-    - Useful: useful.md
-    - Standard Operating Procedure Guide: http://UNT-RITS.github.io/talon_sop/_build/html/index.html 
+    - About: index.md
+    - Details: details.md
+    - User Guide:
+        - Getting Started: user_guide/getting_started.md
+    - Resouces:
+        - Python: python.md
+        - R: r.md
+    - Tutorials: tutorials.md
 
-repo_name: UNT-RITS
-repo_url: https://github.com/UNT-RITS
+# Copyright footer
+copyright: 'Copyright &copy; University of North Texas, University IT Services'
+
+# Social links at botoom right
+repo_name: 'UNT-RITS'
+repo_url: 'https://github.com/UNT-RITS'
+edit_uri: ''
 
 extra:
     manifest: manifest.webmanifest
     
+extra_css:
+    - 'stylesheets/unibe.css'
+
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 
 markdown_extensions:
+    - abbr
+    - def_list
+    - tables
+    - sane_lists
+    - smarty
+    - attr_list
     - footnotes
     - admonition
     - codehilite:
@@ -44,12 +62,11 @@ markdown_extensions:
     
     
 theme:
+    name: material
     logo: images/logo.svg
     language: en
     features:
         - instant
-        - tabs
-    name: material
     palette:
         primary: green
     font: true
