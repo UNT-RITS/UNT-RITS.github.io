@@ -1,0 +1,838 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../images/logo.svg">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
+    
+    
+      
+        <title>Get started on Talon - UNT Talon Hight-Performance Computing Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a676eddb.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b302131d.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/unibe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#get-started-on-talon" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="UNT Talon Hight-Performance Computing Documentation" class="md-header-nav__button md-logo" aria-label="UNT Talon Hight-Performance Computing Documentation">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            UNT Talon Hight-Performance Computing Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Get started on Talon
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/UNT-RITS" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    UNT-RITS
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UNT Talon Hight-Performance Computing Documentation" class="md-nav__button md-logo" aria-label="UNT Talon Hight-Performance Computing Documentation">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    UNT Talon Hight-Performance Computing Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/UNT-RITS" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    UNT-RITS
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../details/details/" title="Details" class="md-nav__link">
+      Details
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      User Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        User Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user_guide/user_guide/" title="Talon 3 User Guide" class="md-nav__link">
+      Talon 3 User Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user_guide/getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Terminal
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Terminal" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Terminal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../terminal/commands/" title="Commands" class="md-nav__link">
+      Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../terminal/ssh/" title="SSH" class="md-nav__link">
+      SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../terminal/screen/" title="Screen" class="md-nav__link">
+      Screen
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Python
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Python" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_info/" title="Info" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/code_samples/" title="Code Samples" class="md-nav__link">
+      Code Samples
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/jupyter_notebook/" title="Jupyter Notebook" class="md-nav__link">
+      Jupyter Notebook
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/tensorflow/" title="Tensorflow" class="md-nav__link">
+      Tensorflow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/pytorch/" title="PyTorch" class="md-nav__link">
+      PyTorch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../jupyter_hub/jupyter_hub/" title="Jupyter Hub" class="md-nav__link">
+      Jupyter Hub
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../pycharm/pycharm/" title="PyCharm" class="md-nav__link">
+      PyCharm
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      R
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="R" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        R
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../r/r_info/" title="Info" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/" title="Info" class="md-nav__link">
+      Info
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-a-short-py-code-on-hpc-talon-3" class="md-nav__link">
+    How to run a short .py code on HPC (Talon 3)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-mac-oslinux-ubuntu" class="md-nav__link">
+    For  Mac OS/Linux Ubuntu
+  </a>
+  
+    <nav class="md-nav" aria-label="For  Mac OS/Linux Ubuntu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-request-an-hpc-account" class="md-nav__link">
+    1. Request an HPC account:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-open-terminalcommand-prompt" class="md-nav__link">
+    2. Open terminal/command prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-login-to-your-hpc-account-by-typing-ssh-youraccounttalon3hpcuntedu-press-enter-and-youll-be-asked-to-insert-password-as-bellow" class="md-nav__link">
+    3. Login to your HPC account by typing: ssh youraccount@talon3.hpc.unt.edu, press Enter and you’ll be asked to insert password as bellow:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-fill-in-with-your-password-hit-enter-and-you-are-in" class="md-nav__link">
+    4. Fill in with your password, hit Enter and you are in!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-environment-setup" class="md-nav__link">
+    5. Environment setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-lookup-module" class="md-nav__link">
+    6. Lookup module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-upload-file-to-talon" class="md-nav__link">
+    7. Upload file to Talon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-access-user-folder" class="md-nav__link">
+    8. Access user folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-create-project-folder" class="md-nav__link">
+    9. Create project folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-access-your-new-folder" class="md-nav__link">
+    10. Access your new folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-copy-local-to-hpc" class="md-nav__link">
+    11. Copy local to HPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-run-the-job" class="md-nav__link">
+    13. Run the job!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-windows" class="md-nav__link">
+    From Windows
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="get-started-on-talon">Get started on Talon<a class="headerlink" href="#get-started-on-talon" title="Permanent link">&para;</a></h1>
+<h2 id="how-to-run-a-short-py-code-on-hpc-talon-3">How to run a short .py code on HPC (Talon 3)<a class="headerlink" href="#how-to-run-a-short-py-code-on-hpc-talon-3" title="Permanent link">&para;</a></h2>
+<h2 id="for-mac-oslinux-ubuntu">For  <code>Mac OS/Linux Ubuntu</code><a class="headerlink" href="#for-mac-oslinux-ubuntu" title="Permanent link">&para;</a></h2>
+<h3 id="1-request-an-hpc-account">1. Request an HPC account:<a class="headerlink" href="#1-request-an-hpc-account" title="Permanent link">&para;</a></h3>
+<ul>
+<li>If you already have one, you are good to go;</li>
+<li>If you don’t have one, please visit <a href="https://hpc.unt.edu/account-request">https://hpc.unt.edu/account-request</a> ;</li>
+<li>Read carefully and make sure you have all information requested:</li>
+</ul>
+<p><img alt="New Account" src="../../images/getting_started/new_account.png" /></p>
+<ul>
+<li>When you are ready, go to <a href="https://hpc.unt.edu/user">https://hpc.unt.edu/user</a> ;</li>
+<li>Login in with your EUID (6 characters: initials+4 digits);</li>
+<li>Fill in the form and wait for our email.</li>
+</ul>
+<p>Make sure you are connected to the UNT VPN:</p>
+<ul>
+<li>Instructions can be found here <a href="https://itservices.cas.unt.edu/services/accounts-servers/articles/cisco-anyconnect-mobility-client-vpn">https://itservices.cas.unt.edu/services/accounts-servers/articles/cisco-anyconnect-mobility-client-vpn</a></li>
+</ul>
+<h3 id="2-open-terminalcommand-prompt">2. Open <code>terminal/command prompt</code><a class="headerlink" href="#2-open-terminalcommand-prompt" title="Permanent link">&para;</a></h3>
+<h3 id="3-login-to-your-hpc-account-by-typing-ssh-youraccounttalon3hpcuntedu-press-enter-and-youll-be-asked-to-insert-password-as-bellow">3. Login to your HPC account by typing: <code>ssh youraccount@talon3.hpc.unt.edu</code>, press Enter and you’ll be asked to insert password as bellow:<a class="headerlink" href="#3-login-to-your-hpc-account-by-typing-ssh-youraccounttalon3hpcuntedu-press-enter-and-youll-be-asked-to-insert-password-as-bellow" title="Permanent link">&para;</a></h3>
+<p><img alt="New Account" src="../../images/getting_started/login_hpc.png" /></p>
+<h3 id="4-fill-in-with-your-password-hit-enter-and-you-are-in">4. Fill in with your password, hit Enter and you are in!<a class="headerlink" href="#4-fill-in-with-your-password-hit-enter-and-you-are-in" title="Permanent link">&para;</a></h3>
+<p><img alt="New Account" src="../../images/getting_started/get_in_hpc.png" /></p>
+<h3 id="5-environment-setup">5. Environment setup<a class="headerlink" href="#5-environment-setup" title="Permanent link">&para;</a></h3>
+<p>Before running any kind of code, you need to make sure you have the right environment set up. For this, type “module avail” and press Enter. This will give you something like in the following picture where you can check all modules that are available on HPC. </p>
+<p><img alt="New Account" src="../../images/getting_started/modules_hpc.png" /></p>
+<h3 id="6-lookup-module">6. Lookup module<a class="headerlink" href="#6-lookup-module" title="Permanent link">&para;</a></h3>
+<p>Look for the module you need. Let’s say you want to run your code using Python 3.6.5. I will type:
+module load python/3.6.5 because that’s the name in the list of modules available (see the bottom of the picture above)</p>
+<h3 id="7-upload-file-to-talon">7. Upload file to Talon<a class="headerlink" href="#7-upload-file-to-talon" title="Permanent link">&para;</a></h3>
+<p>Now that it’s all set up you only need to upload your file containing the python code </p>
+<h3 id="8-access-user-folder">8. Access user folder<a class="headerlink" href="#8-access-user-folder" title="Permanent link">&para;</a></h3>
+<p>You need to access your user folder from HPC. To do that type in:
+cd /storage/scratch2/youraccount  press Enter
+Hint: if you want to check what subfolders or files you have here you can type ll (small L’s)</p>
+<h3 id="9-create-project-folder">9. Create project folder<a class="headerlink" href="#9-create-project-folder" title="Permanent link">&para;</a></h3>
+<p>I will create a folder for this project I want to run just to be organized
+mkdir functions you can replace word functions with the desired name for your folder
+Hint: avoid spaces, don’t give names like “Project 1”, instead you can say “Project_1”</p>
+<p><img alt="New Account" src="../../images/getting_started/check_files_hpc.png" /></p>
+<p>after creating the folder I used the <code>ll</code> or <code>ls</code> command to check my files and folders from where I am at the moment</p>
+<h3 id="10-access-your-new-folder">10. Access your new folder<a class="headerlink" href="#10-access-your-new-folder" title="Permanent link">&para;</a></h3>
+<p>Access your new folder where the magic will happen:
+cd functions/ </p>
+<h3 id="11-copy-local-to-hpc">11. Copy local to HPC<a class="headerlink" href="#11-copy-local-to-hpc" title="Permanent link">&para;</a></h3>
+<p>Now, you want to copy your .py file from local computer on talon in the new folder created. 
+For this, open a new terminal window without closing this one.</p>
+<p>Use the command cd to access the path of the file you want to transfer. For example:
+cd Downloads/
+But, if you are not sure where you are at you can type “ls” first:</p>
+<p><img alt="New Account" src="../../images/getting_started/local_files.png" /></p>
+<p>I know my file is in Downloads folder so I’ll go there by typing “cd Downloads/”</p>
+<p><img alt="New Account" src="../../images/getting_started/local_files_2.png" /></p>
+<p>I used again the “ls” command to see all the files in the folder, but what I am interested in is functions_comparison.py</p>
+<p>Now, to transfer this file I’ll do the following:
+scp functions_comparison.py <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#112;&#48;&#51;&#52;&#56;&#64;&#116;&#97;&#108;&#111;&#110;&#51;&#46;&#104;&#112;&#99;&#46;&#117;&#110;&#116;&#46;&#101;&#100;&#117;">&#108;&#112;&#48;&#51;&#52;&#56;&#64;&#116;&#97;&#108;&#111;&#110;&#51;&#46;&#104;&#112;&#99;&#46;&#117;&#110;&#116;&#46;&#101;&#100;&#117;</a>:/storage/scratch2/lp0348/functions</p>
+<p><img alt="New Account" src="../../images/getting_started/transfer_local_files.png" /></p>
+<p>Notice the command is:
+scp filename <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#111;&#117;&#114;&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#64;&#116;&#97;&#108;&#111;&#110;&#51;&#46;&#104;&#112;&#99;&#46;&#117;&#110;&#116;&#46;&#101;&#100;&#117;">&#121;&#111;&#117;&#114;&#97;&#99;&#99;&#111;&#117;&#110;&#116;&#64;&#116;&#97;&#108;&#111;&#110;&#51;&#46;&#104;&#112;&#99;&#46;&#117;&#110;&#116;&#46;&#101;&#100;&#117;</a>:/the/folder/path/on/talon</p>
+<p>After introducing your HPC account password you should see something like:</p>
+<p><img alt="New Account" src="../../images/getting_started/transfer_local_files_2.png" /></p>
+<p>Notice there’s a percentage indicating the transfer progress </p>
+<p>Go back to the previous terminal window you were working on. You can check if the file was transferred:</p>
+<p><img alt="New Account" src="../../images/getting_started/check_transfer_local_files.png" /></p>
+<p>Here it is!</p>
+<p>Step 12. Time to create a batch file
+What is a batch file? – It is a script containing code running details related to resources you want to allocate  from HPC.
+Detailed specifications on each line you can find here: <a href="https://github.com/gmihaila/unt_hpc/tree/master/job_batch">https://github.com/gmihaila/unt_hpc/tree/master/job_batch</a> 
+For our example we will use a basic configuration.</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash </span>
+<span class="c1">#SBATCH -J job_name </span>
+<span class="c1">#SBATCH -o output_job.o%j ## &lt;- can be left like that (creates a file with the output)</span>
+<span class="c1">#SBATCH -e error_job.e%j. ## &lt;- can be left like that (creates a file with the errors occurred)</span>
+<span class="c1">#SBATCH -p public</span>
+<span class="c1">#SBATCH --qos general</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH -n 1</span>
+<span class="c1">#SBATCH -C c6320</span>
+
+module load python
+python test.py     <span class="c1">## &lt;- name of the .py code file</span>
+</code></pre></div>
+
+<p>We need to create a file .job where you put the above information. In this tutorial we will use VIM:</p>
+<p><img alt="New Account" src="../../images/getting_started/use_vim_hpc.png" /></p>
+<p>The command: vim name_of_your_job.job</p>
+<p>After running this line you should see:</p>
+<p><img alt="New Account" src="../../images/getting_started/use_vim_hpc_2.png" /></p>
+<p>This automatically created the batch file .job and opened it.
+In order to insert the content we discussed above, first hit “i” button from the keyboard.
+Notice the bottom changed to “—INSERT—”</p>
+<p><img alt="New Account" src="../../images/getting_started/use_vim_hpc_3.png" /></p>
+<p>Now, you can type each line from scratch or you can paste it directly. But, if you are using Linux Ctrl+Shift+V would be the command to paste some content; if you are using Mac Command+V as usual will do the work.</p>
+<p>It might be easier for the beginning to write the batch content elsewhere and then just copy-paste the final commands.</p>
+<p><img alt="New Account" src="../../images/getting_started/job_example_hpc.png" /></p>
+<p><img alt="New Account" src="../../images/getting_started/job_example_hpc_2.png" /></p>
+<p>To save and quit the batch file: press “Esc” then type “:wq”</p>
+<p><img alt="New Account" src="../../images/getting_started/job_example_hpc_3.png" /></p>
+<p>Now “Enter” and will bring you back to the folder.</p>
+<h3 id="13-run-the-job">13. Run the job!<a class="headerlink" href="#13-run-the-job" title="Permanent link">&para;</a></h3>
+<p>The command line is: sbatch job_name.job
+You’d probably get the message:</p>
+<p><img alt="New Account" src="../../images/getting_started/submit_job_hpc.png" /></p>
+<p>It’s done! You submitted a job that runs the py code on HPC.</p>
+<p>If you want to check your jobs you can use the command: squeue -u your_account </p>
+<p><img alt="New Account" src="../../images/getting_started/submit_job_hpc_2.png" /></p>
+<p>If all your jobs are done already then squeue -u your_account command will give you the above output.</p>
+<h2 id="from-windows">From <code>Windows</code><a class="headerlink" href="#from-windows" title="Permanent link">&para;</a></h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; University of North Texas, University IT Services
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

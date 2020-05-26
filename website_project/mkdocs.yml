@@ -2,13 +2,34 @@ site_name: UNT Talon Hight-Performance Computing Documentation
 
 nav:
     - About: index.md
-    - Details: details.md
+    
+    - Details: details/details.md
+    
     - User Guide:
+        - Talon 3 User Guide: user_guide/user_guide.md
         - Getting Started: user_guide/getting_started.md
-    - Resouces:
-        - Python: python.md
-        - R: r.md
-    - Tutorials: tutorials.md
+        
+    - Terminal:
+        - Commands: terminal/commands.md
+        - SSH: terminal/ssh.md
+        - Screen: terminal/screen.md
+        
+    - Python:
+        - Info: python/python_info.md
+        - Code Samples: python/code_samples.md
+        - Jupyter Notebook: python/jupyter_notebook.md
+        - Tensorflow: python/tensorflow.md
+        - PyTorch: python/pytorch.md
+        
+    - Jupyter Hub: jupyter_hub/jupyter_hub.md
+    
+    - PyCharm: pycharm/pycharm.md
+    
+    - R:
+        - Info: r/r_info.md
+        
+    - Tutorials:
+        Info: tutorials/tutorials.md
 
 # Copyright footer
 copyright: 'Copyright &copy; University of North Texas, University IT Services'
