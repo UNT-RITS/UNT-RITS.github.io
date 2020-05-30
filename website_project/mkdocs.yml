@@ -28,8 +28,7 @@ nav:
     - R:
         - Info: r/r_info.md
         
-    - Tutorials:
-        Info: tutorials/tutorials.md
+    - Tutorials-Workshops: tutorials/tutorials.md
 
 # Copyright footer
 copyright: 'Copyright &copy; University of North Texas, University IT Services'
