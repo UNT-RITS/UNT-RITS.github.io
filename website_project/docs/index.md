@@ -7,29 +7,21 @@
 
 # Welcome to the High Performance Computing (HPC) documentation of the University of North Texas
 
-!!! info "Recent Updates"
-* Tensorflow 2.1 is now available for both CPU and GPU. Use:  `module load tensorflow/2.1.0-gpu`
-* Dedicated module for the [transformers](https://github.com/huggingface/transformers) library *State-of-the-art Natural Language Processing for Pytorch and TensorFlow 2.0*. Currently tested mostly with PyTorch. Use:  `module load transformers`
+!!! info "Recent Updates 08/2020"
+* Created new WORK filesystem space
+* New parition names (producation/preproducation)
+* New visualization address: vis.acs.unt.edu
 
-## About this documentaiton
+## About this Documentation
 
 The purpose of this documentation is to be an add-on to the current official documentation available on our main website: **[https://hpc.unt.edu](https://hpc.unt.edu)**.
 
-
-## What is UNT HPC?
-
-UNT HPC is a part of Research IT Services, offering state-of-the-art computing, storage, visualization, and networking service to the University of North Texas. We help researchers and other members of UNT use advance computing power to enable higher research throughput and expand research capabilities.
-
-Our services include the following:
-
-* Maintaining HPC allocations and resources for UNT researchers and UNT courses
-* Consultation services in performance research on HPC
-* Community training and outreach including workshops and HPC tutorials
-* Providing end-user HPC support
-* Exploring grant opportunities for HPC related projects
+Please contact hpc-admin@unt.edu for any Talon3 and UNT HPC support questions!
 
 
 ## Make sure you check out
 
 * **[UNT HPC Website](https://hpc.unt.edu/)**
 * **[RITS Twitter](https://twitter.com/UNT_RITS)**
+* **[RITS GitHub](https://github.com/UNT-RITS)**
+

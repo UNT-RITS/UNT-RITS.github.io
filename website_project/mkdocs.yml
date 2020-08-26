@@ -3,34 +3,50 @@ site_name: UNT Talon3 High-Performance Computing Documentation
 nav:
     - About: index.md
     
-    - Details: details/details.md
-    
-    - User Guide:
-        - Talon 3 User Guide: user_guide/user_guide.md
-        - Getting Started: user_guide/getting_started.md
-        
-    - Terminal:
-        - Commands: terminal/commands.md
-        - SSH: terminal/ssh.md
-        - Screen: terminal/screen.md
-        
-    - Python:
-        - Info: python/python_info.md
-        - Code Samples: python/code_samples.md
-        - Tensorflow: python/tensorflow.md
-        - PyTorch: python/pytorch.md
-        
-    - Jupyter:
-        - Jupyter Notebook: jupyter/jupyter_notebook.md
-        - Jupyter Hub: jupyter/jupyter_hub.md
+    - Apply for Talon3 account: newaccount.md
 
-    - PyCharm: pycharm/pycharm.md
+    - Talon System Overview:
+        - Compute Nodes: overview/nodes.md
+        - File System: overview/filesystem.md
+        - Network: under_construction.md
+        - Citing Talon Work: overview/cite.md
     
-    - R:
-        - Info: r/r_info.md
-        
-    - Tutorials-Workshops: tutorials/tutorials.md
+    - Accessing Talon3:
+       - Logging into Talon3: under_construction.md
+       - Jupyter: 
+                - Jupyter Notebook: jupyter/jupyter_notebook.md
+                - Jupyter Hub: jupyter/jupyter_hub.md
+       - Rstudio: r/rsutdio.md
+       - PyCharm: pycharm/pycharm.md
+       
+    - User Information:
+       - SLURM queuing system: under_construction.md
+       - Managing Files: under_construction.md
+       - Environment Modules: under_construction.md
 
+    - Using Software:
+        - Building Software:
+                - Compiling procesdures: 
+                        - Basics: under_construction.md
+                        - Math: under_construction.md
+                        - Parallel: under_construction.md
+                        - GPU: under_construction.md
+                - High-level languages: 
+                        - Overview: under_construction.md
+                        - Python:
+                                - Info: python/python_info.md
+                                - Code Samples: python/code_samples.md
+                                - Tensorflow: python/tensorflow.md
+                                - PyTorch: python/pytorch.md
+                        - R: under_construction.md
+                        - MatLab: under_construction.md
+                        - Mathematica: under_construction.md
+
+        - Scienific software: under_construction.md
+
+    - Tutorials: tutorials/tutorials.md
+
+   
 # Copyright footer
 copyright: 'Copyright &copy; University of North Texas, University IT Services'
 
