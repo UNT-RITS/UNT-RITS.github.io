@@ -1,4 +1,4 @@
-site_name: UNT Talon Hight-Performance Computing Documentation
+site_name: UNT Talon3 High-Performance Computing Documentation
 
 nav:
     - About: index.md
@@ -17,12 +17,13 @@ nav:
     - Python:
         - Info: python/python_info.md
         - Code Samples: python/code_samples.md
-        - Jupyter Notebook: python/jupyter_notebook.md
         - Tensorflow: python/tensorflow.md
         - PyTorch: python/pytorch.md
         
-    - Jupyter Hub: jupyter_hub/jupyter_hub.md
-    
+    - Jupyter:
+        - Jupyter Notebook: jupyter/jupyter_notebook.md
+        - Jupyter Hub: jupyter/jupyter_hub.md
+
     - PyCharm: pycharm/pycharm.md
     
     - R:
@@ -33,14 +34,14 @@ nav:
 # Copyright footer
 copyright: 'Copyright &copy; University of North Texas, University IT Services'
 
-# Social links at botoom right
-repo_name: 'UNT-RITS'
-repo_url: 'https://github.com/UNT-RITS'
-edit_uri: ''
-
 extra:
     manifest: manifest.webmanifest
-    
+    social:
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/UNT_RITS
+        - icon: fontawesome/brands/github
+          link: https://github.com/UNT-RITS
+
 extra_css:
     - 'stylesheets/unibe.css'
 

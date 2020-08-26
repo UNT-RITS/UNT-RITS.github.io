@@ -29,17 +29,7 @@ Our services include the following:
 * Exploring grant opportunities for HPC related projects
 
 
-## Acknowledging Talon
-
-Please acknowledge the support of the High-Performance Computing services in all publications with the following statement:
-
-**"Computational resources were provided by the University of North Texas High-Performance Computing Services, a division of the Research IT Services, University Information Technology, with additional support from UNT Office of Research and Economic Development."**
-
-Alternatively, a short version will suffice: 
-
-**"Computational resources were provided by UNT office of High-Performance Computing."**
-
 ## Make sure you check out
 
-* **[Usage Policy](https://hpc.unt.edu/usage-policy)**
-* **[Operational Guidelines](https://hpc.unt.edu/hpc-ops)**
+* **[UNT HPC Website](https://hpc.unt.edu/)**
+* **[RITS Twitter](https://twitter.com/UNT_RITS)**
