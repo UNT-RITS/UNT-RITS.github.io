@@ -16,11 +16,11 @@ nav:
        - Jupyter: 
                 - Jupyter Notebook: jupyter/jupyter_notebook.md
                 - Jupyter Hub: jupyter/jupyter_hub.md
-       - Rstudio: r/rsutdio.md
+       - Rstudio: r/rstudio.md
        - PyCharm: pycharm/pycharm.md
        
     - User Information:
-       - SLURM queuing system: under_construction.md
+       - SLURM queuing system: userinfo/slurm.md
        - Managing Files: under_construction.md
        - Environment Modules: under_construction.md
 
