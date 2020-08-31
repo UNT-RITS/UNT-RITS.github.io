@@ -11,6 +11,7 @@
 * Created new WORK filesystem space
 * New parition names (producation/preproducation)
 * New visualization address: vis.acs.unt.edu
+* Updated Rstudio to version 1.4.750 
 
 ## About this Documentation
 

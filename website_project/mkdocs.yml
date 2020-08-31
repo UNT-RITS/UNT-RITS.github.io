@@ -12,7 +12,10 @@ nav:
         - Citing Talon Work: overview/cite.md
     
     - Accessing Talon3:
-       - Logging into Talon3: under_construction.md
+       - Logging into Talon3:
+                - ssh: terminal/ssh.md 
+                - commands: terminal/commands.md  
+                - screen.md: terminal/screen.md  
        - Jupyter: 
                 - Jupyter Notebook: jupyter/jupyter_notebook.md
                 - Jupyter Hub: jupyter/jupyter_hub.md
