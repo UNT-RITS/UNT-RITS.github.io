@@ -3,9 +3,9 @@ site_name: UNT Talon3 High-Performance Computing Documentation
 nav:
     - About: index.md
     
-    - Apply for Talon3 account: newaccount.md
+    - Talon3 account information: newaccount.md
 
-    - Talon System Overview:
+    - Talon3 System Overview:
         - Compute Nodes: overview/nodes.md
         - File System: overview/filesystem.md
         - Network: under_construction.md

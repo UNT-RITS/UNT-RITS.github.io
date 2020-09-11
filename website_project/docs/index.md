@@ -18,6 +18,7 @@ This documentation is the current official documentation of UNT's flagship resou
 
 Please contact hpc-admin@unt.edu for any Talon3 and UNT HPC support questions!
 
+You can find information on getting a HPC Talon account [here](newaccount.md)
 
 ## Make sure you check out
 
