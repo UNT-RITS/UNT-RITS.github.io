@@ -29,7 +29,7 @@ nav:
 
     - Using Software:
         - Building Software:
-                - Compiling procesdures: 
+                - Compiling Procedure: 
                         - Basics: under_construction.md
                         - Math: under_construction.md
                         - Parallel: under_construction.md
@@ -45,7 +45,7 @@ nav:
                         - MatLab: under_construction.md
                         - Mathematica: under_construction.md
 
-        - Scienific software: under_construction.md
+        - Scientific Software: sci_soft/sci_soft.md
 
     - Tutorials: tutorials/tutorials.md
 
