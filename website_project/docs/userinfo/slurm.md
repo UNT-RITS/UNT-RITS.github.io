@@ -32,7 +32,7 @@ Currently on Talon3, there are 4 partitions for users to submit their jobs.
 
 Users have access the production partition if their allocation reaches 300,000 CPU hours within the current and previous FY OR they have an active external funding source.
 
-If you require more resources, you may submit a support ticket to hpc-admin@unt.edu and the Talon3 admin staff will evaaluate your request.
+If you require more resources, you may submit a support ticket to SciComp-Support@unt.edu and the Talon3 admin staff will evaaluate your request.
 
 ### QOS
 
