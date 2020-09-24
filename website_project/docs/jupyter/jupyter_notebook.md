@@ -6,17 +6,16 @@ There are two ways you can run Jupyter Notebook, either as an
 
 * Interactive node job
 
-	This is for SMALL TEST notebooks that are ran on the visulization login node
-	
-	These notebooks maybe terminated if using too much computing resources
+	* This is for **SMALL TEST** notebooks that are ran on the visulization login node
+
+!!! warning
+	Interactive notebooks maybe terminated if using too much computing resources, taking too long, or taking too much memory. 
 
 * Compute node job
 
-	This is for more insentive jobs
-
-	You came run a notebook as a SLURM queueing job
-
-	This is required for using GPU functions 
+	* This is for more larger, insentive jobs
+	* You will run a notebook on a compute node via the SLURM queueing job
+	* This is required for using GPU functions because you need GPU compute nodes
 
 ## First time ONLY
 

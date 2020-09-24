@@ -24,13 +24,13 @@ NOTE: The PI/Sponsor of the Research allocation will be responsible for any acti
 ### Academic
 
 Academic allocations are awarded to UNT class instructors for a course that can make use of HPC resources. These allocations are directed by the instructors and students taking the course can be allocated accounts on Talon. The allocations are only active for the duration of the course.
-If an instructor wants access to HPC resources for a course, please contact hpc-admin@unt.edu at least one month before the course starts to ensure the Academic allocations are ready when the course starts. 
+If an instructor wants access to HPC resources for a course, please contact SciComp-Support@unt.edu at least one month before the course starts to ensure the Academic allocations are ready when the course starts. 
 As an added service provided to Academic allocations, a member of the HPC or DSA staff can take over a class if the instructor is out for any reason (i.e. out of town meeting or conference). Instead of canceling class, we can provide a lecture over various HPC, programing, and statistical methodology topics. The HPC staff can also give a Talon 3 User Orientation to a class especially if students will heavily use Talon 3 during their coursework. Please contact the HPC staff in advance if you would like to use this service.
 
 ## Who is eligible for an account/allocation?
 
 Any UNT faculty, students, postdocs, research fellows, and external visiting scholars is eligible for an account to UNT’s HPC resources. Principal Investigators (PI) can receive allocations with their account request to run their calculations on the computing resources. All other users (i.e. students, external scholar, etc.) can also apply for an account but must be sponsored by a UNT faculty-level PI. PIs are responsible for ensuring that they and sponsored users comply with all relevant, University policies, and State and Federal laws.
-Every HPC account holder MUST have an active UNT AMS EUID to apply. If you are an external visiting scholar/collaborator you can apply for a UNT AMS account (EUID) through the Office of the Provost and Vice President for Academic Affairs by filling out the Visiting Scholar/Researcher EMPLID/EUID Request Form (VPAA-40a) and following directions from the Office of the Provost.
+**Every new HPC account holder MUST have an active UNT AMS EUID to apply.** If you are an external visiting scholar/collaborator you can apply for a UNT AMS account (EUID) through the Office of the Provost and Vice President for Academic Affairs by filling out the Visiting Scholar/Researcher EMPLID/EUID Request Form (VPAA-40a) and following directions from the Office of the Provost.
 Accounts CANNOT be shared with anyone. Each user requires an individual account.
 
 ## How do I apply for an account?

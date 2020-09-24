@@ -5,10 +5,8 @@ Talon 3 has a variety of file systems. It is crucial that you understand the pro
 # Summary 
 | Name    | Path                    | Type     | Quota               | Other Information          |
 | ------  | ----------------------- | -------- |-------------------- | -------------------------- |
-| HOME    | /home/$USER             | ext4     | 20GB per user       | Backed up weekly           |
-| SCRATCH | /storage/scratch2/$USER | Lustre   | 25TB per allocation | No Backup/no data purged   |
-| WORK    | /work/$USER             | Lustre   | 2TB per user        | No Backup/subject to purge |
-
-# Details
+| HOME    | /home/$USER             | ext4/NFS     | 20GB per user       |  Backed up Daily           |
+| SCRATCH | /storage/scratch2/$USER | Lustre   | 25TB per allocation |  No Backup. No data purged |
+| WORK    | /work/$USER             | Lustre   | 2TB per user        |  No Backup. Subject to purge at high usage |
 
 

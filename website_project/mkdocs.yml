@@ -1,9 +1,9 @@
-site_name: UNT Talon3 High-Performance Computing Documentation
+site_name: UNT Talon3 HPC Documentation
 
 nav:
     - About: index.md
     
-    - Talon3 account information: newaccount.md
+    - Talon3 Account Information: newaccount.md
 
     - Talon3 System Overview:
         - Compute Nodes: overview/nodes.md
@@ -12,20 +12,18 @@ nav:
         - Citing Talon Work: overview/cite.md
     
     - Accessing Talon3:
-       - Logging into Talon3:
-                - ssh: terminal/ssh.md 
-                - commands: terminal/commands.md  
-                - screen.md: terminal/screen.md  
+       - Logging into Talon3: userinfo/login.md
+       - SSH Terminal: terminal/ssh.md
        - Jupyter: 
                 - Jupyter Notebook: jupyter/jupyter_notebook.md
                 - Jupyter Hub: jupyter/jupyter_hub.md
        - Rstudio: r/rstudio.md
        - PyCharm: pycharm/pycharm.md
        
-    - User Information:
+    - Talon3 User Guide:
        - SLURM queuing system: userinfo/slurm.md
-       - Managing Files: under_construction.md
-       - Environment Modules: under_construction.md
+       - Managing Files: userinfo/files.md
+       - Environment Modules: userinfo/modules.md
 
     - Using Software:
         - Building Software:
@@ -47,11 +45,13 @@ nav:
 
         - Scientific Software: sci_soft/sci_soft.md
 
-    - Tutorials: tutorials/tutorials.md
+    - Other NTSC Info:
+            - NTSC Meetings: other/ntscmeeting.md
+            - Tutorials: tutorials/tutorials.md
 
    
 # Copyright footer
-copyright: 'Copyright &copy; University of North Texas, University IT Services'
+copyright: 'Copyright &copy; North Texas Scientific Computing, University of North Texas'
 
 extra:
     manifest: manifest.webmanifest

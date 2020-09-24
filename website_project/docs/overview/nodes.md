@@ -64,6 +64,7 @@ Jupyter Notebooks and Rstudio can be access to these nodes.
 X11 forwarding will need to be enabled with the SSH client that you are using. Alternately, you can access a specific visualization node by entering one of the following domain names: 
 
 * `vis.acs.unt.edu`
-
+* `vis-06.acs.unt.edu`
+* `vis-07.acs.unt.edu`
 
 

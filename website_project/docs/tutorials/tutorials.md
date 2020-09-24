@@ -7,6 +7,23 @@ Please check our tutorials dedicated GitHub Repository: [https://github.com/UNT-
 
 <br>
 
+## Introduction course to R
+
+Created by Jonathan Starkweather from Data Science & Analytics
+
+[Presentation](http://bayes.acs.unt.edu:8083/BayesContent/class/Jon/R_SC/)
+
+<br>
+
+## Using Rstudio on Talon3
+
+A video tutorial from Rich Herrington from Data Science & Analystics
+
+[Presentation](http://bayes.acs.unt.edu:8083/BayesContent/video/RStudio_Login_2018-01-22_12-12-57.mp4)
+
+<br>
+
+
 ## Find New Sentiments in Text Data
 
 **march 03, 2020 | University of North Texas DP F223**

@@ -17,16 +17,16 @@ JupyterHub runs on Talon UNT HPC, and makes it possible to serve a pre-configure
 
 To using Jupyterhub you will first need to follow a few commands on Talon to setup your login
 
-    ```bash
-    $ cd /home/$USER
-    $ ln -s /work/$USER/.local .local
-    ```
+```
+cd /home/$USER
+ln -s /work/$USER/.local .local
+```
 
 ## Where is JupyterHub running?
 
 JupyterHub is currently running on:
 
-* `vis.acs.unt.edu`
+* `http://vis.acs.unt.edu:8000`
 
 ## How can I use JupyterHub on Talon?
 
@@ -34,19 +34,19 @@ It is **very** easy to use it!
 
 Here are the steps to follow in order to connect to JupyterHub and start using it:
 
-### Make sure you are connected to the UNT VPN. 
+!!! tip 
 
-Don't know what/how? [Here](https://hpc.unt.edu/userguide#off_campus) and [here](https://itservices.cas.unt.edu/services/accounts-servers/articles/cisco-anyconnect-mobility-client-vpn) is the info you need!
+	Make sure you are connected to the UNT VPN. 
+
+	Don't know what/how? [Here](https://itservices.cas.unt.edu/services/accounts-servers/articles/cisco-anyconnect-mobility-client-vpn) is the info you need!
 
 ### Open your favorite browser on your local machine/laptop
 
-Any browser like `Safari, Chrom, Mozzila` will work.
+Any browser like `Safari, Chrom, or Mozzila` will work.
 
 ### Choose  JupyterHub Server
 
-#### vis.acs.unt.edu
-
-This is a more recent [Visualization Login Nodes]() that has `V100` GPU.
+Currently, the JupyterHub Server is running on our [Visualization node](../overview/nodes.md#visualization-login-nodes) which has `V100` GPUs.
 
 **Go to [vis.acs.unt.edu:8000](http://vis.acs.unt.edu:8000/hub/login){:target="_blank"}**
 
