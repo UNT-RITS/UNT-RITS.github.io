@@ -18,7 +18,7 @@ If you never used SSH before [this](https://www.digitalocean.com/community/tutor
 
 Or if you don't know if you have SSH installed on your sistem [Mac](http://osxdaily.com/2017/04/28/howto-ssh-client-mac/)    [Linux](https://www.tecmint.com/install-openssh-server-in-linux/)
 
-## Eamples of using termainal apps
+## Examples of using termainal apps
 
 !!! warning
         We are still working on updating our docs!
