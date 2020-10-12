@@ -4,11 +4,16 @@
 	Walk-in and in-person appointments are limited to favor virtual appointments via Zoom, phone, or other means of online communication. 
 	Please send an email to SciComp-Support@unt.edu to schedule an appointment with a NTSC staff member. Thank you for your understanding.
 
-!!! info "Recent Updates 08/2020"
-	* [New visualization address](overview/nodes.md#visualization-login-nodes)
+!!! info "Recent Updates 10/2020"
 	* Updated Rstudio to version 1.4.750
 	* New Support Email: SciComp-Support@unt.edu
-	* Added info from [Fall 2020 Talon User Meeting](other/ntscmeeting.md)
+	* Julia 1.5.2 
+	* Upcoming Monthly Talon User Group Meeting Oct 21 @ 1pm
+
+!!! note "Upcoming Monthly Talon User Group Meeting"
+	* When: Oct 21 @ 1pm
+	* Where: Zoom - Email SciComp-Support@unt.edu for details
+	* Dr. Santiageo Betelu will discuss his group’s research entitled “The limits of quantum circuit simulation with low precision arithmetic” using Talon
 
 ## Welcome 
 
