@@ -38,7 +38,7 @@ You can find information on getting a HPC Talon3 account [here](newaccount.md)
 
 ## Talon System Stats
 
-![Talon_Stat](https://raw.githubusercontent.com/UNT-RITS/Talon3_stats/master/t3stats.png)
+![Talon_Stat](https://raw.githubusercontent.com/UNT-RITS/Talon3_stats/master/t3down.png)
 
 
 
