@@ -7,17 +7,14 @@
 !!! info "Recent Updates 10/2020"
 	* Updated Rstudio to version 1.4.750
 	* New Support Email: SciComp-Support@unt.edu
-	* Julia 1.5.2 
-	* Upcoming Monthly Talon User Group Meeting Oct 21 @ 1pm
+	* New Julia version 1.5.2 
 
-!!! note "Upcoming Monthly Talon User Group Meeting"
-	* When: Oct 21 @ 1pm
-	* Where: Zoom - Email SciComp-Support@unt.edu for details
-	* Dr. Santiageo Betelu will discuss his group’s research entitled “The limits of quantum circuit simulation with low precision arithmetic” using Talon
+
+![Talon_pic](images/talon-green-1200x300.png)
 
 ## Welcome 
 
-Welcome to the [North Texas Scientific Computing](https://it.unt.edu/ntsc).
+Welcome to the [North Texas Scientific Computing](https://it.unt.edu/ntsc)!
 
 NTSC supports the [High Performance Computing](https://hpc.unt.edu/) resources at the [University of North Texas](https://www.unt.edu/).
 
@@ -38,7 +35,7 @@ You can find information on getting a HPC Talon3 account [here](newaccount.md)
 
 ## Talon System Stats
 
-![Talon_Stat](https://raw.githubusercontent.com/UNT-RITS/Talon3_stats/master/t3down.png)
+![Talon_Stat](https://raw.githubusercontent.com/UNT-RITS/Talon3_stats/master/t3stats.png)
 
 
 

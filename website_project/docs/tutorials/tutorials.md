@@ -1,5 +1,7 @@
 # Tutorials and Worksops Talon HPC
 
+![Tutorials_pic](files/hpc-workshop-20181130.png)
+
 This is where we will post tutorials and workshops regarding Talon HPC
 
 Please check our tutorials dedicated GitHub Repository: [https://github.com/UNT-RITS/Tutorials](https://github.com/UNT-RITS/Tutorials)

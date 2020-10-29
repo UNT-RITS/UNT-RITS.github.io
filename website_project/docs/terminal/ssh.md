@@ -16,7 +16,7 @@ If you are logging from a Linux or Mac personal computer, make sure it has an SS
 
 If you never used SSH before [this](https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu) is a helpful example.
 
-Or if you don't know if you have SSH installed on your sistem [Mac](http://osxdaily.com/2017/04/28/howto-ssh-client-mac/)    [Linux](https://www.tecmint.com/install-openssh-server-in-linux/)
+Or if you don't know if you have SSH installed on your system, [click here for Mac](http://osxdaily.com/2017/04/28/howto-ssh-client-mac/) and [here for Linux](https://www.tecmint.com/install-openssh-server-in-linux/)
 
 ## Examples of using termainal apps
 
