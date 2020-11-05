@@ -27,24 +27,16 @@ nav:
 
     - Using Software:
         - Building Software:
-                - Compiling Procedure: 
-                        - Basics: under_construction.md
-                        - Math: under_construction.md
-                        - Parallel: under_construction.md
-                        - GPU: under_construction.md
+                - Compiling Procedure: under_construction.md 
                 - High-level languages: 
-                        - Overview: under_construction.md
                         - Python:
                                 - Info: python/python_info.md
                                 - Code Samples: python/code_samples.md
                                 - Tensorflow: python/tensorflow.md
                                 - PyTorch: python/pytorch.md
-                        - R: under_construction.md
-                        - MatLab: under_construction.md
-                        - Mathematica: under_construction.md
 
         - Scientific Software: sci_soft/sci_soft.md
-
+        - Containers: sci_soft/containers.md
     - Other NTSC Info:
             - NTSC Meetings: other/ntscmeeting.md
             - Tutorials: tutorials/tutorials.md
