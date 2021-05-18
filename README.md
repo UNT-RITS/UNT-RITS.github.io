@@ -2,7 +2,7 @@
 
 ## [https://unt-rits.github.io](https://unt-rits.github.io)
 
-## Purpose
+## Purpose:
 
 Friendly place to keep up to date documentations for **UNT HPC Talon**
 
