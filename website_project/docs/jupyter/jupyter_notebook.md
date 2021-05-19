@@ -1,6 +1,6 @@
 # Jupyter Notebook on Talon HPC
 
-These are instrucitons on how to start a **YOUR OWN** Jupyter Notebook server on Talon and how to access it from your computer.
+These are instructions on how to start a **YOUR OWN** Jupyter Notebook server on Talon and how to access it from your computer.
 
 There are two ways you can run Jupyter Notebook, either as an
 
@@ -13,8 +13,8 @@ There are two ways you can run Jupyter Notebook, either as an
 
 * Compute node job
 
-	* This is for more larger, insentive jobs
-	* You will run a notebook on a compute node via the SLURM queueing job
+	* This is for more larger, intensive jobs
+	* You will run a notebook on a compute node via the SLURM queuing job
 	* This is required for using GPU functions because you need GPU compute nodes
 
 ## First time ONLY
