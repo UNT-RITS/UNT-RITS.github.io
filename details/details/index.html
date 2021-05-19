@@ -1,0 +1,1789 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../images/logo.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>Talon Hight-Performance Computing - UNT Talon3 HPC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:""}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/unibe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#talon-hight-performance-computing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-header__button md-logo" aria-label="UNT Talon3 HPC Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UNT Talon3 HPC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Talon Hight-Performance Computing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-nav__button md-logo" aria-label="UNT Talon3 HPC Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    UNT Talon3 HPC Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../newaccount/" class="md-nav__link">
+        Talon3 Account Information
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Talon3 System Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Talon3 System Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Talon3 System Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/nodes/" class="md-nav__link">
+        Compute Nodes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/filesystem/" class="md-nav__link">
+        File System
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../under_construction/" class="md-nav__link">
+        Network
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/cite/" class="md-nav__link">
+        Citing Talon Work
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Accessing Talon3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accessing Talon3" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Accessing Talon3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userinfo/login/" class="md-nav__link">
+        Logging into Talon3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal/ssh/" class="md-nav__link">
+        SSH Terminal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Jupyter
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Jupyter" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Jupyter
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter/jupyter_notebook/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter/jupyter_hub/" class="md-nav__link">
+        Jupyter Hub
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../r/rstudio/" class="md-nav__link">
+        Rstudio
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pycharm/pycharm/" class="md-nav__link">
+        PyCharm
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Talon3 User Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Talon3 User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Talon3 User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userinfo/slurm/" class="md-nav__link">
+        SLURM queuing system
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userinfo/files/" class="md-nav__link">
+        Managing Files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../userinfo/modules/" class="md-nav__link">
+        Environment Modules
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Using Software
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Using Software" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Using Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      <label class="md-nav__link" for="__nav_6_1">
+        Building Software
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Building Software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Building Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../under_construction/" class="md-nav__link">
+        Compiling Procedure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2" type="checkbox" id="__nav_6_1_2" >
+      
+      <label class="md-nav__link" for="__nav_6_1_2">
+        High-level languages
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="High-level languages" data-md-level="3">
+        <label class="md-nav__title" for="__nav_6_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          High-level languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2_1" type="checkbox" id="__nav_6_1_2_1" >
+      
+      <label class="md-nav__link" for="__nav_6_1_2_1">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Python" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_1_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python_info/" class="md-nav__link">
+        Info
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/code_samples/" class="md-nav__link">
+        Code Samples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tensorflow/" class="md-nav__link">
+        Tensorflow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/pytorch/" class="md-nav__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sci_soft/sci_soft/" class="md-nav__link">
+        Scientific Software
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sci_soft/containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Other NTSC Info
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Other NTSC Info" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Other NTSC Info
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/ntscmeeting/" class="md-nav__link">
+        NTSC Meetings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terminology" class="md-nav__link">
+    Terminology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-node" class="md-nav__link">
+    Compute Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-node" class="md-nav__link">
+    Login Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization-login-nodes" class="md-nav__link">
+    Visualization Login Nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu-node" class="md-nav__link">
+    GPU Node
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job" class="md-nav__link">
+    Job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-batch-job" class="md-nav__link">
+    Batch / batch job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interractive-session" class="md-nav__link">
+    Interractive Session
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Module/s
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="talon-hight-performance-computing">Talon Hight-Performance Computing<a class="headerlink" href="#talon-hight-performance-computing" title="Permanent link">&para;</a></h1>
+<h2 id="terminology">Terminology<a class="headerlink" href="#terminology" title="Permanent link">&para;</a></h2>
+<p>We refer to the same thing when we say: <em>Talon</em> , <em>HPC</em>, <em>Talon3</em> (refering to the version of Talon), <em>Cluster</em>, <em>High-Performance Computing</em>, <em>Server</em>.</p>
+<h2 id="compute-node">Compute Node<a class="headerlink" href="#compute-node" title="Permanent link">&para;</a></h2>
+<p>The Talon 3 compute nodes are where the users will run their software and other computationally intensive applications. Users <strong>do NOT directly login to these nodes</strong>. 
+Users run their calculations on these nodes by submitting them to the Slurm queuing system. </p>
+<p>These specific nodes can be chosen in the SLURM queuing system by including a resource request option <code>#SBATCH -C</code> to meet your needs (i.e. for the Dell PowerEdge <strong>C6320</strong> use <code>#SBATCH -C c6320</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Quanity</th>
+<th>Memory(GB)</th>
+<th>Cores</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192</td>
+<td>64 GB</td>
+<td>28</td>
+<td>Dell PowerEdge <strong>C6320</strong> server with two 2.4GHz Intel Xeon E5-2680 v4 fourteen-core processors.</td>
+</tr>
+<tr>
+<td>75</td>
+<td>32 GB</td>
+<td>16</td>
+<td>Dell PowerEdge <strong>R420</strong> server with two 2.1GHz Intel Xeon E5-2450 eight-core processors.</td>
+</tr>
+<tr>
+<td>64</td>
+<td>64 GB</td>
+<td>16</td>
+<td>Dell PowerEdge <strong>R420</strong> server with two 2.1GHz Intel Xeon E5-2450 eight-core processors</td>
+</tr>
+<tr>
+<td>8</td>
+<td>512 GB</td>
+<td>32</td>
+<td>Dell PowerEdge <strong>R720</strong> server with four 2.4GHz Intel Xeon E5-4640 eight-core processors.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>64 GB</td>
+<td>28</td>
+<td>Dell PowerEdge <strong>R730</strong> server with two 2.4GHz Intel Xeon E5-2680 v4 fourteen-core processors and <strong>two Nvidia Tesla K80 GPUS (<code>4,992 GPU</code> cores/card)</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="login-node">Login Node<a class="headerlink" href="#login-node" title="Permanent link">&para;</a></h2>
+<p>The Talon 3 login nodes can be access by the domain name: 
+<div class="highlight"><pre><span></span><code>talon3.hpc.unt.edu
+</code></pre></div>
+These login nodes are for users to setup jobs and simple file editing via a Linux Command Line terminal. <strong>Users will submit jobs via the SLURM queuing system to be dispatched on the compute nodes. There is NO X11 Forwarding capable on this server.</strong></p>
+<h2 id="visualization-login-nodes">Visualization Login Nodes<a class="headerlink" href="#visualization-login-nodes" title="Permanent link">&para;</a></h2>
+<p>There are five login nodes that have X11 capabilities and are Slurm submission hosts. This host is intended for using the graphical-based software, e.g., gnuplot, matplotlib, and other notebook features in software, such as MATLAB and Mathematica. <strong>Users can use these nodes for any post-processing tasks, but any compute-intensive tasks MUST be submitted through the Slurm queuing system.</strong> </p>
+<p><strong>Also, X11 graphical sessions require large bandwidth to work effectively, and you may experience lag while on a home DSL or Cable ISP.</strong></p>
+<p>X11 forwarding will need to be enabled with the SSH client that you are using. Alternately, you can access a specific visualization node by entering one of the following domain names: </p>
+<ul>
+<li><code>vis.acs.unt.edu</code></li>
+<li><code>vis-01.acs.unt.edu</code></li>
+<li><code>vis-02.acs.unt.edu</code></li>
+<li><code>vis-03.acs.unt.edu</code></li>
+<li><code>vis-04.acs.unt.edu</code></li>
+</ul>
+<h2 id="gpu-node">GPU Node<a class="headerlink" href="#gpu-node" title="Permanent link">&para;</a></h2>
+<p>There are 16 GPU Nodes on Talon. Each one contains 2 Nvidia Tesla K80 GPUs.</p>
+<table>
+<thead>
+<tr>
+<th>Quanity</th>
+<th>Memory(GB)</th>
+<th>Cores</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>64 GB</td>
+<td>28</td>
+<td>Dell PowerEdge <strong>R730</strong> server with two 2.4GHz Intel Xeon E5-2680 v4 fourteen-core processors and <strong>two Nvidia Tesla K80 GPUS (<code>4,992 GPU</code> cores/card)</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="job">Job<a class="headerlink" href="#job" title="Permanent link">&para;</a></h2>
+<p>In an HPC cluster, the users&rsquo; tasks to be done on compute nodes are controlled by a batch queuing system. Queuing systems manage job requests (shell scripts generally referred to as jobs) submitted by all users on Talon 3. </p>
+<p><strong>In other words, to get your computations done by the cluster, you must submit a job request to a specific batch queue.</strong> The scheduler will assign your job to a compute node in the order determined by the policy on that queue and the availability of an idle compute node. </p>
+<p>Currently, Talon 3 resources have several policies in place to help guarantee fair resource utilization from all users. </p>
+<h2 id="batch-batch-job">Batch / batch job<a class="headerlink" href="#batch-batch-job" title="Permanent link">&para;</a></h2>
+<p>Refers to the process of creating a <code>.job</code> file and submit it to HPC using the slurm command <code>sbatch job_name.job</code> where <code>job_name.job</code> is your job file.</p>
+<p>Here is a brief example of a <code>.job</code> file that runs a python script named <code>test.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH -J job_name</span>
+<span class="c1">#SBATCH -o output_job.o%j</span>
+<span class="c1">#SBATCH -e error_job.e%j</span>
+<span class="c1">#SBATCH -p public</span>
+<span class="c1">#SBATCH --qos general</span>
+<span class="c1">#SBATCH -N 1</span>
+<span class="c1">#SBATCH -n 1</span>
+<span class="c1">#SBATCH -C c6320</span>
+
+module load python
+
+python test.py
+</code></pre></div>
+<p>For more details on how to write a job file please check: <strong><a href="https://hpc.unt.edu/userguide#Slurm_tutorials">Slurm Tutotials</a></strong></p>
+<h2 id="interractive-session">Interractive Session<a class="headerlink" href="#interractive-session" title="Permanent link">&para;</a></h2>
+<p>Interactive job sessions can be used on Talon if you need to compile or test software. An example command of starting an interactive sessions is shown below:</p>
+<div class="highlight"><pre><span></span><code> $ srun -p public --qos general -C c6320  --pty bash
+</code></pre></div>
+<p>This launches an interactive job session and lanches a bash shell to a compute node. From there, you can execute software and shell commands that would otherwise not be allowed on the Talon login nodes.</p>
+<p>You can use same <strong>Slurm Commands</strong>:
+Check our <a href="https://hpc.unt.edu/userguide#partitions">UNT website</a></p>
+<p><strong>Example of requesting 1 node with email notificaiton for CPU:</strong></p>
+<div class="highlight"><pre><span></span><code>srun -p public --qos general --mail-user<span class="o">=</span>user@unt.edu --mail-type<span class="o">=</span>ALL -N <span class="m">1</span> -C c6320 --pty bash
+</code></pre></div>
+<p><strong>Example of requesting 1 node with email notificaiton for GPU:</strong></p>
+<div class="highlight"><pre><span></span><code>srun -p gpu --mail-user<span class="o">=</span>user@unt.edu --mail-type<span class="o">=</span>ALL -N <span class="m">1</span> --pty bash
+</code></pre></div>
+<p>This is very useful because it notifies you when your node has been allocated to you so you can start work!</p>
+<p>For more details on how to write a job file please check: <strong><a href="https://hpc.unt.edu/userguide#Slurm_tutorials">Slurm Tutotials</a></strong></p>
+<h2 id="modules">Module/s<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h2>
+<p>Talon 3 uses LMOD to manage your environment. It handles setting up access to the software packages, libraries, and other utilities.</p>
+<p>To see the list of all available modules, run the command:</p>
+<div class="highlight"><pre><span></span><code>module avail
+</code></pre></div>
+<p>To see which modules are already loaded:</p>
+<div class="highlight"><pre><span></span><code>module list
+</code></pre></div>
+<p>To add a module for the current session:</p>
+<div class="highlight"><pre><span></span><code>module load &lt;module_name&gt;
+</code></pre></div>
+<p>where <module_name> is the name of the module you wish to load.</p>
+<p>For example, if you need to use the Intel compilers, you can run</p>
+<p><div class="highlight"><pre><span></span><code>module load python/3.6.5
+</code></pre></div>
+This will load the Python version 3.6.5.</p>
+<p>Here is a table of current modules that can be found on Talon 3:</p>
+<table>
+<thead>
+<tr>
+<th>/cm/shared/modulefiles/science</th>
+<th>/cm/shared/modulefiles/science</th>
+<th>/cm/shared/modulefiles/utils</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JDFTx/1.5.0</td>
+<td>R/R-devel</td>
+<td>PackageEnv/gcc4.8.5_OBLAS0.2.19_OMPI2.1.0</td>
+</tr>
+<tr>
+<td>OpenSees/3.0.3</td>
+<td>R/3.6.0                                       (D)</td>
+<td>PackageEnv/gcc8.1.0_OBLAS0.2.19_OMPI2.1.0</td>
+</tr>
+<tr>
+<td>amber/16-cuda-mpi</td>
+<td>anaconda/5.2</td>
+<td>PackageEnv/intel17.0.4_MKL_IMPI_AVX</td>
+</tr>
+<tr>
+<td>amber/16-gen</td>
+<td>atlas/3.10.3</td>
+<td>PackageEnv/intel17.0.4_MKL_IMPI_AVX2</td>
+</tr>
+<tr>
+<td>amber/18-gen              (D)</td>
+<td>bison/3.5.90</td>
+<td>PackageEnv/intel18.0.3_gcc4.8.5_MKL_IMPI_AVX</td>
+</tr>
+<tr>
+<td>ansys/2019r1</td>
+<td>boost/1.63.0</td>
+<td>PackageEnv/intel18.0.3_gcc4.8.5_MKL_IMPI_AVX2</td>
+</tr>
+<tr>
+<td>armadillo/7.950.1</td>
+<td>boost/1.71.0                                  (D)</td>
+<td>PackageEnv/intel18.0.3_gcc8.1.0_MKL_IMPI_AVX  (D)</td>
+</tr>
+<tr>
+<td>bamtools/2.4.1</td>
+<td>bzip2/1.0.6</td>
+<td></td>
+</tr>
+<tr>
+<td>bazel/0.9.0</td>
+<td>cluster-tools/7.3</td>
+<td></td>
+</tr>
+<tr>
+<td>bazel/0.14.0              (D)</td>
+<td>cmake/3.8.0</td>
+<td></td>
+</tr>
+<tr>
+<td>bbmap/38.76</td>
+<td>cmake/3.15.2                                  (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>bcftools/1.4</td>
+<td>cmd</td>
+<td></td>
+</tr>
+<tr>
+<td>bcftools/1.4.1</td>
+<td>cmgui/7.3</td>
+<td></td>
+</tr>
+<tr>
+<td>bcftools/1.6              (D)</td>
+<td>cmsh</td>
+<td></td>
+</tr>
+<tr>
+<td>beast/1.8.4</td>
+<td>cuda/101/toolkit/10.1.243</td>
+<td></td>
+</tr>
+<tr>
+<td>beast/2.4.5               (D)</td>
+<td>cuda/102/toolkit/10.2.89</td>
+<td></td>
+</tr>
+<tr>
+<td>bedtools/2.18</td>
+<td>cuda/75/blas/7.5.18</td>
+<td></td>
+</tr>
+<tr>
+<td>bioperl/1.007002</td>
+<td>cuda/75/fft/7.5.18</td>
+<td></td>
+</tr>
+<tr>
+<td>blast/2.6.0</td>
+<td>cuda/75/nsight/7.5.18</td>
+<td></td>
+</tr>
+<tr>
+<td>bowtie2/2.3.1</td>
+<td>cuda/75/profiler/7.5.18</td>
+<td></td>
+</tr>
+<tr>
+<td>bowtie2/2.3.2             (D)</td>
+<td>cuda/75/toolkit/7.5.18</td>
+<td></td>
+</tr>
+<tr>
+<td>bsr/bsr</td>
+<td>cuda/80/blas/8.0.61</td>
+<td></td>
+</tr>
+<tr>
+<td>bsr/dbsrhf                (D)</td>
+<td>cuda/80/fft/8.0.61</td>
+<td></td>
+</tr>
+<tr>
+<td>bwa/0.7.17</td>
+<td>cuda/80/nsight/8.0.61</td>
+<td></td>
+</tr>
+<tr>
+<td>caffe/cpu</td>
+<td>cuda/80/profiler/8.0.61</td>
+<td></td>
+</tr>
+<tr>
+<td>caffe/gpu                 (D)</td>
+<td>cuda/80/toolkit/8.0.61</td>
+<td></td>
+</tr>
+<tr>
+<td>cairo/1.14.10</td>
+<td>cuda/90/blas/9.0.176</td>
+<td></td>
+</tr>
+<tr>
+<td>cd-hit/4.6.6</td>
+<td>cuda/90/fft/9.0.176</td>
+<td></td>
+</tr>
+<tr>
+<td>cd-hit/4.8.1              (D)</td>
+<td>cuda/90/nsight/9.0.176</td>
+<td></td>
+</tr>
+<tr>
+<td>circos/0.69</td>
+<td>cuda/90/profiler/9.0.176</td>
+<td></td>
+</tr>
+<tr>
+<td>clark/1.2.4</td>
+<td>cuda/90/toolkit/9.0.176</td>
+<td></td>
+</tr>
+<tr>
+<td>comsol/5.5</td>
+<td>cuda/91/blas/9.1.85</td>
+<td></td>
+</tr>
+<tr>
+<td>cp2k/6.1</td>
+<td>cuda/91/fft/9.1.85</td>
+<td></td>
+</tr>
+<tr>
+<td>cufflinks/2.2.1</td>
+<td>cuda/91/nsight/9.1.85</td>
+<td></td>
+</tr>
+<tr>
+<td>ddocent/2.2.16</td>
+<td>cuda/91/profiler/9.1.85</td>
+<td></td>
+</tr>
+<tr>
+<td>dirac/2019</td>
+<td>cuda/91/toolkit/9.1.85</td>
+<td></td>
+</tr>
+<tr>
+<td>dlpoly/class-1.10</td>
+<td>cudnn/5.1/cuda75</td>
+<td></td>
+</tr>
+<tr>
+<td>dlpoly/4.08               (D)</td>
+<td>cudnn/5.1/cuda80                              (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>eigen/3.3.3</td>
+<td>cudnn/6.0/cuda75</td>
+<td></td>
+</tr>
+<tr>
+<td>emto/5.8.1</td>
+<td>cudnn/6.0/cuda80                              (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>espresso/6.0</td>
+<td>cudnn/7.0/cuda90</td>
+<td></td>
+</tr>
+<tr>
+<td>espresso/6.5              (D)</td>
+<td>cudnn/7.1/cuda90</td>
+<td></td>
+</tr>
+<tr>
+<td>fastqc/0.11.8</td>
+<td>cudnn/7.6.5/cuda90</td>
+<td></td>
+</tr>
+<tr>
+<td>fastxtoolkit/0.0.13</td>
+<td>cudnn/7.6.5/cuda101</td>
+<td></td>
+</tr>
+<tr>
+<td>fpart/1.0.0</td>
+<td>cudnn/7.6.5/cuda102                           (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>gamess/08182016</td>
+<td>curl/7.54.1</td>
+<td></td>
+</tr>
+<tr>
+<td>gamess/10302017           (D)</td>
+<td>ea-utils/2017</td>
+<td></td>
+</tr>
+<tr>
+<td>gatk/3.80</td>
+<td>fftw/2.1.5</td>
+<td></td>
+</tr>
+<tr>
+<td>gaussian/g09-revA</td>
+<td>fftw/3.3.6</td>
+<td></td>
+</tr>
+<tr>
+<td>gaussian/g09-revD         (D)</td>
+<td>fftw/3.3.8                                    (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>gaussian/g16-RevA.03-ax2</td>
+<td>gcc/4.8.5</td>
+<td></td>
+</tr>
+<tr>
+<td>genenetwork/2</td>
+<td>gcc/5.5.0</td>
+<td></td>
+</tr>
+<tr>
+<td>gistic2/2.0.23</td>
+<td>gcc/6.1.0</td>
+<td></td>
+</tr>
+<tr>
+<td>gnuplot/5.0.6             (D)</td>
+<td>gcc/6.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>grasp/grasp2018</td>
+<td>gcc/8.1.0                                     (L,D)</td>
+<td></td>
+</tr>
+<tr>
+<td>gromacs/5.1.4-fftw</td>
+<td>git/2.9.3</td>
+<td></td>
+</tr>
+<tr>
+<td>gromacs/2019.1-cuda</td>
+<td>glibc/2.23</td>
+<td></td>
+</tr>
+<tr>
+<td>gromacs/2019.1            (D)</td>
+<td>gnuplot/5.0.6</td>
+<td></td>
+</tr>
+<tr>
+<td>gsl/2.4</td>
+<td>go/1.10.3</td>
+<td></td>
+</tr>
+<tr>
+<td>gulp/4.5</td>
+<td>gperf/3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>h2o4pu/0.3.2</td>
+<td>gsl/2.6                                       (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>hadoop/2.8.0-rdma</td>
+<td>hdf5/1.6.10</td>
+<td></td>
+</tr>
+<tr>
+<td>hisat/0.1.6</td>
+<td>hdf5/1.8.18-gnu</td>
+<td></td>
+</tr>
+<tr>
+<td>hisat/2.0.5               (D)</td>
+<td>hdf5/1.8.18-intel</td>
+<td></td>
+</tr>
+<tr>
+<td>icu/4c-59</td>
+<td>hdf5/1.10.5                                   (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>jags/4.2.0</td>
+<td>hisat/0.1.6</td>
+<td></td>
+</tr>
+<tr>
+<td>kallisto/0.43.1</td>
+<td>hisat/2.0.5</td>
+<td></td>
+</tr>
+<tr>
+<td>keras/2.1.6</td>
+<td>htslib/1.4</td>
+<td></td>
+</tr>
+<tr>
+<td>keras/2.2.0               (D)</td>
+<td>htslib/1.6                                    (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>kraken/0.10</td>
+<td>htslib/1.10</td>
+<td></td>
+</tr>
+<tr>
+<td>kraken/2.0.7              (D)</td>
+<td>intel/IMPI/17.0.4-AVX</td>
+<td></td>
+</tr>
+<tr>
+<td>lammps/7Aug19</td>
+<td>intel/IMPI/17.0.4-AVX2</td>
+<td></td>
+</tr>
+<tr>
+<td>lammps/11Aug17</td>
+<td>intel/IMPI/17.0.4</td>
+<td></td>
+</tr>
+<tr>
+<td>lammps/17Nov16            (D)</td>
+<td>intel/IMPI/18.0.3-AVX</td>
+<td></td>
+</tr>
+<tr>
+<td>maps/4.2</td>
+<td>intel/IMPI/18.0.3-AVX2</td>
+<td></td>
+</tr>
+<tr>
+<td>mathematica/10.0</td>
+<td>intel/IMPI/18.0.3                             (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>mathematica/11.3          (D)</td>
+<td>intel/compilers/17.0.4-AVX</td>
+<td></td>
+</tr>
+<tr>
+<td>matlab/R2014b</td>
+<td>intel/compilers/17.0.4-AVX2</td>
+<td></td>
+</tr>
+<tr>
+<td>matlab/R2016b</td>
+<td>intel/compilers/18.0.3-AVX                    (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>matlab/R2018b             (D)</td>
+<td>intel/compilers/18.0.3-AVX2</td>
+<td></td>
+</tr>
+<tr>
+<td>minimac2/2014.9.15</td>
+<td>intel/mkl/17.0.4-AVX</td>
+<td></td>
+</tr>
+<tr>
+<td>mothur/1.43.0</td>
+<td>intel/mkl/17.0.4-AVX2</td>
+<td></td>
+</tr>
+<tr>
+<td>mpiblast/1.6.0</td>
+<td>intel/mkl/17.0.4</td>
+<td></td>
+</tr>
+<tr>
+<td>mplus/8</td>
+<td>intel/mkl/18.0.3-AVX</td>
+<td></td>
+</tr>
+<tr>
+<td>mummer/4.0</td>
+<td>intel/mkl/18.0.3-AVX2</td>
+<td></td>
+</tr>
+<tr>
+<td>namd/2.12-cuda</td>
+<td>intel/mkl/18.0.3                              (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>namd/2.12                 (D)</td>
+<td>java/1.8</td>
+<td></td>
+</tr>
+<tr>
+<td>ncurses/6.0</td>
+<td>java/13.0.2                                   (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>nonmem/7.4.3</td>
+<td>jupyter/4.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>nwchem/6.8</td>
+<td>lapack/3.7.0</td>
+<td></td>
+</tr>
+<tr>
+<td>nwchem/6.8.1-dev          (D)</td>
+<td>libffi/3.2.1</td>
+<td></td>
+</tr>
+<tr>
+<td>oases/0.2.8</td>
+<td>libtool/2.4.6</td>
+<td></td>
+</tr>
+<tr>
+<td>oncosnp/1.4</td>
+<td>miniconda/2/4.7.12</td>
+<td></td>
+</tr>
+<tr>
+<td>openfoam/5.0</td>
+<td>miniconda/&frac34;.7.12</td>
+<td></td>
+</tr>
+<tr>
+<td>ovito/2.9.0</td>
+<td>netcdf/c/4.7.3</td>
+<td></td>
+</tr>
+<tr>
+<td>paraview/5.3.0</td>
+<td>octave/5.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>parsync/1.67</td>
+<td>openblas/0.2.19</td>
+<td></td>
+</tr>
+<tr>
+<td>phyml/3.1</td>
+<td>opencv/3.4.7</td>
+<td></td>
+</tr>
+<tr>
+<td>picard/2.10</td>
+<td>openmpi/gcc/1.10.6</td>
+<td></td>
+</tr>
+<tr>
+<td>plink/1.07</td>
+<td>openmpi/gcc/2.1.0</td>
+<td></td>
+</tr>
+<tr>
+<td>plink/1.90</td>
+<td>openmpi/gcc/3.1.4                             (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>plink/2.00                (D)</td>
+<td>openmpi/intel/2.1.0-cuda</td>
+<td></td>
+</tr>
+<tr>
+<td>psi4/1.0.0</td>
+<td>openmpi/intel/2.1.0                           (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>pytorch/gpu-1.1.0</td>
+<td>openmpi/pgi/1.10.2</td>
+<td></td>
+</tr>
+<tr>
+<td>pytorch/gpu-1.2.0</td>
+<td>openmpi/pgi/2.1.2</td>
+<td></td>
+</tr>
+<tr>
+<td>pytorch/gpu-1.4.0</td>
+<td>openmpi/pgi/3.1.3                             (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>pytorch/gpu-1.5.0         (D)</td>
+<td>parallel/20200122</td>
+<td></td>
+</tr>
+<tr>
+<td>qiime2/2020.2</td>
+<td>perl/5.24.1</td>
+<td></td>
+</tr>
+<tr>
+<td>raxml/8.2.10              (D)</td>
+<td>perl/5.30.2                                   (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>rohan/1.0</td>
+<td>pgi/17.5</td>
+<td></td>
+</tr>
+<tr>
+<td>sagemath/7.6</td>
+<td>pgi/18.10</td>
+<td></td>
+</tr>
+<tr>
+<td>salmon/1.0</td>
+<td>pgi/19.7                                      (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>samtools/1.4</td>
+<td>pssh/2.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>samtools/1.4.1</td>
+<td>pyMPI/2.4</td>
+<td></td>
+</tr>
+<tr>
+<td>samtools/1.6              (D)</td>
+<td>python/2.7.13</td>
+<td></td>
+</tr>
+<tr>
+<td>seqprep/1.0</td>
+<td>python/2.7.14-pyCUDA</td>
+<td></td>
+</tr>
+<tr>
+<td>sklearn/0.18.1</td>
+<td>python/3.5.7</td>
+<td></td>
+</tr>
+<tr>
+<td>soapdenovo/1.03</td>
+<td>python/3.6.0</td>
+<td></td>
+</tr>
+<tr>
+<td>spades/3.10.1</td>
+<td>python/3.6.0-2</td>
+<td></td>
+</tr>
+<tr>
+<td>spades/3.12.0             (D)</td>
+<td>python/3.6.5</td>
+<td></td>
+</tr>
+<tr>
+<td>spark/2.3.0</td>
+<td>python/3.7.0</td>
+<td></td>
+</tr>
+<tr>
+<td>spring/spring5</td>
+<td>python/3.7.4                                  (D)</td>
+<td></td>
+</tr>
+<tr>
+<td>sra-tools/2.92</td>
+<td>qt/5.14.0</td>
+<td></td>
+</tr>
+<tr>
+<td>stacks/1.46</td>
+<td>raxml/8.2.10</td>
+<td></td>
+</tr>
+<tr>
+<td>star/2.5.3a</td>
+<td>readline/7.0</td>
+<td></td>
+</tr>
+<tr>
+<td>stringtie/1.3.3b</td>
+<td>singularity/3.6</td>
+<td></td>
+</tr>
+<tr>
+<td>subread/2.0.0</td>
+<td>slurm/16.05.8                                 (L)</td>
+<td></td>
+</tr>
+<tr>
+<td>tdep/1.1</td>
+<td>sparsehash/2.0.2</td>
+<td></td>
+</tr>
+<tr>
+<td>tecplot/2018R1</td>
+<td>szip/1.12b</td>
+<td></td>
+</tr>
+<tr>
+<td>tensorflow/1.2.0</td>
+<td>tcl/8.6.7</td>
+<td></td>
+</tr>
+<tr>
+<td>tensorflow/1.10.1-gpu</td>
+<td>xalt/2.6</td>
+<td></td>
+</tr>
+<tr>
+<td>tensorflow/1.10.1</td>
+<td>xalt/2.8                                      (L,D)</td>
+<td></td>
+</tr>
+<tr>
+<td>tensorflow/1.12.3-gpu</td>
+<td>zlib/1.2.11</td>
+<td></td>
+</tr>
+<tr>
+<td>tensorflow/2.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tensorflow/2.1.0-gpu      (D)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>tophat/2.1.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>transformers/transformers</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>trinity/2.4.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vasp/4.6-vtst</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vasp/5.4.1-vtst</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vasp/5.4.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vasp/5.4.4-vtst           (D)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vcftools/0.1.17</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>velvet/1.2.10</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>visit/2.12.2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>vmd/1.9.3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>warp/4.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>xoopic/2.70</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; North Texas Scientific Computing, University of North Texas
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/UNT_RITS" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/UNT-RITS" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
