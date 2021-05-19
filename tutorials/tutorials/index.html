@@ -1,4 +1,6 @@
 
+
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -8,9 +10,8 @@
       
       
       
-      
-      <link rel="icon" href="../../images/logo.svg">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+      <link rel="shortcut icon" href="../../images/logo.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.8">
     
     
       
@@ -18,24 +19,22 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.01afc2df.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.83bccb1f.min.css">
+      
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
         
-          
-          
-          <meta name="theme-color" content="#4cae4f">
-        
+        <meta name="theme-color" content="#4cae4f">
       
     
     
     
       
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font-family:"";--md-code-font-family:""}</style>
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -54,12 +53,8 @@
     
     
     
-    
-    
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
   
-    
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -77,49 +72,45 @@
     </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-header__button md-logo" aria-label="UNT Talon3 HPC Documentation" data-md-component="logo">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-header-nav__button md-logo" aria-label="UNT Talon3 HPC Documentation">
       
   <img src="../../images/logo.svg" alt="logo">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header-nav__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             UNT Talon3 HPC Documentation
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
             
               Tutorials
             
           </span>
         </div>
-      </div>
+      
     </div>
     
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
@@ -141,6 +132,8 @@
     
     <div class="md-container" data-md-component="container">
       
+        
+      
       
         
       
@@ -148,16 +141,12 @@
         <div class="md-main__inner md-grid">
           
             
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-nav__button md-logo" aria-label="UNT Talon3 HPC Documentation" data-md-component="logo">
+    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-nav__button md-logo" aria-label="UNT Talon3 HPC Documentation">
       
   <img src="../../images/logo.svg" alt="logo">
 
@@ -171,498 +160,504 @@
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        About
-      </a>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../newaccount/" class="md-nav__link">
-        Talon3 Account Information
-      </a>
-    </li>
-  
+
+  <li class="md-nav__item">
+    <a href="../../newaccount/" title="Talon3 Account Information" class="md-nav__link">
+      Talon3 Account Information
+    </a>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      <label class="md-nav__link" for="__nav_3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Talon3 System Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Talon3 System Overview" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Talon3 System Overview
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Talon3 System Overview" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Talon3 System Overview
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../overview/nodes/" class="md-nav__link">
-        Compute Nodes
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../overview/filesystem/" class="md-nav__link">
-        File System
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../under_construction/" class="md-nav__link">
-        Network
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../../overview/nodes/" title="Compute Nodes" class="md-nav__link">
+      Compute Nodes
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../overview/cite/" class="md-nav__link">
-        Citing Talon Work
-      </a>
-    </li>
-  
+          
+          
 
+
+  <li class="md-nav__item">
+    <a href="../../overview/filesystem/" title="File System" class="md-nav__link">
+      File System
+    </a>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../under_construction/" title="Network" class="md-nav__link">
+      Network
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../overview/cite/" title="Citing Talon Work" class="md-nav__link">
+      Citing Talon Work
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Accessing Talon3
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Accessing Talon3" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Accessing Talon3
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Accessing Talon3" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Accessing Talon3
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../userinfo/login/" class="md-nav__link">
-        Logging into Talon3
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../terminal/ssh/" class="md-nav__link">
-        SSH Terminal
-      </a>
-    </li>
-  
 
+  <li class="md-nav__item">
+    <a href="../../userinfo/login/" title="Logging into Talon3" class="md-nav__link">
+      Logging into Talon3
+    </a>
+  </li>
+
+        
           
-            
-  
-  
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../terminal/ssh/" title="SSH Terminal" class="md-nav__link">
+      SSH Terminal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
-      
-      <label class="md-nav__link" for="__nav_4_3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      Jupyter
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Jupyter" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Jupyter
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Jupyter" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
-          <span class="md-nav__icon md-icon"></span>
-          Jupyter
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../jupyter/jupyter_notebook/" class="md-nav__link">
-        Jupyter Notebook
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../jupyter/jupyter_hub/" class="md-nav__link">
-        Jupyter Hub
-      </a>
-    </li>
-  
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../../jupyter/jupyter_notebook/" title="Jupyter Notebook" class="md-nav__link">
+      Jupyter Notebook
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../r/rstudio/" class="md-nav__link">
-        Rstudio
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pycharm/pycharm/" class="md-nav__link">
-        PyCharm
-      </a>
-    </li>
-  
 
+  <li class="md-nav__item">
+    <a href="../../jupyter/jupyter_hub/" title="Jupyter Hub" class="md-nav__link">
+      Jupyter Hub
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../r/rstudio/" title="Rstudio" class="md-nav__link">
+      Rstudio
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pycharm/pycharm/" title="PyCharm" class="md-nav__link">
+      PyCharm
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      <label class="md-nav__link" for="__nav_5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Talon3 User Guide
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Talon3 User Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Talon3 User Guide
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Talon3 User Guide" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Talon3 User Guide
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../userinfo/slurm/" class="md-nav__link">
-        SLURM queuing system
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../userinfo/files/" class="md-nav__link">
-        Managing Files
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../userinfo/modules/" class="md-nav__link">
-        Environment Modules
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../../userinfo/slurm/" title="SLURM queuing system" class="md-nav__link">
+      SLURM queuing system
+    </a>
+  </li>
 
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../userinfo/files/" title="Managing Files" class="md-nav__link">
+      Managing Files
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../userinfo/modules/" title="Environment Modules" class="md-nav__link">
+      Environment Modules
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
       
       
 
-  
-  
-  
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      <label class="md-nav__link" for="__nav_6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Using Software
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Using Software" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Using Software
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Using Software" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Using Software
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
-      
-      <label class="md-nav__link" for="__nav_6_1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Building Software
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Building Software" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Building Software
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Building Software" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_1">
-          <span class="md-nav__icon md-icon"></span>
-          Building Software
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../under_construction/" class="md-nav__link">
-        Compiling Procedure
-      </a>
-    </li>
-  
+          
+          
 
+
+  <li class="md-nav__item">
+    <a href="../../under_construction/" title="Compiling Procedure" class="md-nav__link">
+      Compiling Procedure
+    </a>
+  </li>
+
+        
           
-            
-  
-  
-  
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2" type="checkbox" id="__nav_6_1_2" >
-      
-      <label class="md-nav__link" for="__nav_6_1_2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1-2" type="checkbox" id="nav-6-1-2">
+    
+    <label class="md-nav__link" for="nav-6-1-2">
+      High-level languages
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="High-level languages" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         High-level languages
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="High-level languages" data-md-level="3">
-        <label class="md-nav__title" for="__nav_6_1_2">
-          <span class="md-nav__icon md-icon"></span>
-          High-level languages
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2_1" type="checkbox" id="__nav_6_1_2_1" >
-      
-      <label class="md-nav__link" for="__nav_6_1_2_1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1-2-1" type="checkbox" id="nav-6-1-2-1">
+    
+    <label class="md-nav__link" for="nav-6-1-2-1">
+      Python
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Python" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Python
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Python" data-md-level="4">
-        <label class="md-nav__title" for="__nav_6_1_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Python
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/python_info/" class="md-nav__link">
-        Info
-      </a>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/code_samples/" class="md-nav__link">
-        Code Samples
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/tensorflow/" class="md-nav__link">
-        Tensorflow
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../../python/python_info/" title="Info" class="md-nav__link">
+      Info
+    </a>
+  </li>
 
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../python/pytorch/" class="md-nav__link">
-        PyTorch
-      </a>
-    </li>
-  
+          
+          
 
-          
-        </ul>
-      </nav>
-    </li>
-  
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../../python/code_samples/" title="Code Samples" class="md-nav__link">
+      Code Samples
+    </a>
+  </li>
 
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sci_soft/sci_soft/" class="md-nav__link">
-        Scientific Software
-      </a>
-    </li>
-  
 
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sci_soft/containers/" class="md-nav__link">
-        Containers
-      </a>
-    </li>
-  
+  <li class="md-nav__item">
+    <a href="../../python/tensorflow/" title="Tensorflow" class="md-nav__link">
+      Tensorflow
+    </a>
+  </li>
 
+        
           
-        </ul>
-      </nav>
-    </li>
-  
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/pytorch/" title="PyTorch" class="md-nav__link">
+      PyTorch
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sci_soft/sci_soft/" title="Scientific Software" class="md-nav__link">
+      Scientific Software
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sci_soft/containers/" title="Containers" class="md-nav__link">
+      Containers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
 
     
       
@@ -670,75 +665,79 @@
       
 
   
-  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-  
-  
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
-      
-      <label class="md-nav__link" for="__nav_7">
+    <label class="md-nav__link" for="nav-7">
+      Other NTSC Info
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Other NTSC Info" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Other NTSC Info
-        <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Other NTSC Info" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Other NTSC Info
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/ntscmeeting/" class="md-nav__link">
-        NTSC Meetings
-      </a>
-    </li>
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../other/ntscmeeting/" title="NTSC Meetings" class="md-nav__link">
+      NTSC Meetings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
-          
-            
-  
-  
+
+  <li class="md-nav__item md-nav__item--active">
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tutorials
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         Tutorials
-      </a>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Tutorials" class="md-nav__link md-nav__link--active">
+      Tutorials
+    </a>
+    
       
-        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#introduction-course-to-r" class="md-nav__link">
@@ -785,15 +784,13 @@
     </ul>
   
 </nav>
-      
-    </li>
-  
+    
+  </li>
 
-          
-        </ul>
-      </nav>
-    </li>
-  
+        
+      </ul>
+    </nav>
+  </li>
 
     
   </ul>
@@ -803,23 +800,23 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#introduction-course-to-r" class="md-nav__link">
@@ -871,9 +868,12 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
+          <div class="md-content">
             <article class="md-content__inner md-typeset">
               
+                
+                
+                  
                 
                 
                 <h1 id="tutorials-and-worksops-talon-hpc">Tutorials and Worksops Talon HPC<a class="headerlink" href="#tutorials-and-worksops-talon-hpc" title="Permanent link">&para;</a></h1>
@@ -898,14 +898,14 @@ Use Tensorflow 2, Word Embeddings, Contextual Embeddings.
 We&rsquo;ll do clustering and find best number of cluster in data we don&rsquo;t know anything about.
 We&rsquo;ll do pretty plots to interpret results!
 We&rsquo;ll do all this on our UNT Talon Supercomputer!</p>
-<p><a href="https://gmihaila.github.io/projects/find_new_sentiment.html">Presentation</a> | 
+<p><a href="https://gmihaila.github.io/presentations/find_new_sentiment.html">Presentation</a> | 
 <a href="https://github.com/UNT-RITS/Tutorials/tree/master/workshops/march_3_2020">Materials</a></p>
 <h2 id="intro-to-word-embeddings-nlp-tools-on-talon">Intro to Word Embeddings - NLP Tools on Talon<a class="headerlink" href="#intro-to-word-embeddings-nlp-tools-on-talon" title="Permanent link">&para;</a></h2>
 <p><strong>may 2, 2019 | University of North Texas DP F223</strong></p>
 <p><strong>Presented by George Mihaila</strong></p>
 <p>Natural Language Processing on Talon HPC</p>
 <p>Ever wondered or curious about natural language processing? How do you load a text file, how do you &lsquo;clean&rsquo; it, how do you make use of it? We will learn all that and at the end you will build a Neural Network model that can predict a sentiment of a Movie Review. All this on Talon!</p>
-<p><a href="https://gmihaila.github.io/projects/talon_word_emb_intro.html">Presentation</a> | 
+<p><a href="https://gmihaila.github.io/presentations/talon_word_emb_intro.html">Presentation</a> | 
 <a href="https://github.com/UNT-RITS/Tutorials/tree/master/workshops/may_2_2019">Materials</a></p>
 <p><br></p>
 <h2 id="using-python-and-jupyter-notebooks-on-talon">Using Python and Jupyter Notebooks on Talon<a class="headerlink" href="#using-python-and-jupyter-notebooks-on-talon" title="Permanent link">&para;</a></h2>
@@ -913,7 +913,7 @@ We&rsquo;ll do all this on our UNT Talon Supercomputer!</p>
 <p><strong>Presented by George Mihaila</strong></p>
 <p>Hands on work on Talon UNT HPC</p>
 <p>This workshop will go over some basic instruction about Python and Jupyter Notebooks. We will learn how to see what libraries we have available and how to install your own.Learn how to create a virtual environment, and most exciting build a simple Neural Network model to predict diabetes! All this on Talon!</p>
-<p><a href="https://gmihaila.github.io/projects/talon_python_jupyter.html">Presentation</a> | 
+<p><a href="https://gmihaila.github.io/presentations/talon_python_jupyter.html">Presentation</a> | 
 <a href="https://github.com/UNT-RITS/Tutorials/tree/master/workshops/may_1_2019">Materials</a></p>
 <p><br></p>
 <h2 id="machine-learning-neural-networks-on-talon">Machine Learning - Neural Networks on Talon<a class="headerlink" href="#machine-learning-neural-networks-on-talon" title="Permanent link">&para;</a></h2>
@@ -921,7 +921,7 @@ We&rsquo;ll do all this on our UNT Talon Supercomputer!</p>
 <p><strong>Presented by George Mihaila</strong></p>
 <p>What are Neural Networks, and why everyone is talking about them?</p>
 <p>This workshop is meant to give a general overview of why Neural Networks and Deep Learning are getting so much attention and help shed some light on how they work and what applications are possible because of them.</p>
-<p><a href="https://gmihaila.github.io/projects/deep_learning_workshop.html">Presentation</a> | </p>
+<p><a href="https://gmihaila.github.io/presentations/deep_learning_workshop.html">Presentation</a> | </p>
                 
               
               
@@ -932,30 +932,31 @@ We&rsquo;ll do all this on our UNT Talon Supercomputer!</p>
             </article>
           </div>
         </div>
-        
       </main>
       
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="../../other/ntscmeeting/" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              NTSC Meetings
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../other/ntscmeeting/" title="NTSC Meetings" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-          </div>
-        </a>
-      
-      
-    </nav>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                NTSC Meetings
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -969,7 +970,6 @@ We&rsquo;ll do all this on our UNT Talon Supercomputer!</p>
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
-        
       </div>
       
   <div class="md-footer-social">
@@ -999,13 +999,19 @@ We&rsquo;ll do all this on our UNT Talon Supercomputer!</p>
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
     
-    
-      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      <script src="../../assets/javascripts/vendor.df0def68.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -1,0 +1,107 @@
+site_name: UNT Talon3 HPC Documentation
+
+nav:
+    - About: index.md
+    
+    - Talon3 Account Information: newaccount.md
+
+    - Talon3 System Overview:
+        - Compute Nodes: overview/nodes.md
+        - File System: overview/filesystem.md
+        - Network: under_construction.md
+        - Citing Talon Work: overview/cite.md
+    
+    - Accessing Talon3:
+       - Logging into Talon3: userinfo/login.md
+       - SSH Terminal: terminal/ssh.md
+       - Jupyter: 
+                - Jupyter Notebook: jupyter/jupyter_notebook.md
+                - Jupyter Hub: jupyter/jupyter_hub.md
+       - Rstudio: r/rstudio.md
+       - PyCharm: pycharm/pycharm.md
+       
+    - Talon3 User Guide:
+       - SLURM queuing system: userinfo/slurm.md
+       - Managing Files: userinfo/files.md
+       - Environment Modules: userinfo/modules.md
+
+    - Using Software:
+        - Building Software:
+                - Compiling Procedure: under_construction.md 
+                - High-level languages: 
+                        - Python:
+                                - Info: python/python_info.md
+                                - Code Samples: python/code_samples.md
+                                - Tensorflow: python/tensorflow.md
+                                - PyTorch: python/pytorch.md
+
+        - Scientific Software: sci_soft/sci_soft.md
+        - Containers: sci_soft/containers.md
+    - Other NTSC Info:
+            - NTSC Meetings: other/ntscmeeting.md
+            - Tutorials: tutorials/tutorials.md
+
+   
+# Copyright footer
+copyright: 'Copyright &copy; North Texas Scientific Computing, University of North Texas'
+
+extra:
+    manifest: manifest.webmanifest
+    social:
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/UNT_RITS
+        - icon: fontawesome/brands/github
+          link: https://github.com/UNT-RITS
+
+extra_css:
+    - 'stylesheets/unibe.css'
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+
+markdown_extensions:
+    - abbr
+    - def_list
+    - tables
+    - sane_lists
+    - smarty
+    - attr_list
+    - footnotes
+    - admonition
+    - codehilite:
+        guess_lang: true
+        linenums: true
+    - toc:
+        permalink: true
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tabbed
+    - pymdownx.tilde
+    
+    
+theme:
+    favicon: images/logo.svg
+    name: material
+    logo: images/logo.svg
+    language: en
+    features:
+        - instant
+    palette:
+        primary: green
+    font: true
+        
+site_favicon: images/logo.svg
