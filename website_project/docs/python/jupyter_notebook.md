@@ -1,6 +1,6 @@
 # Jupyter Notebook on Talon HPC
 
-These are instrucitons on how to start a **YOUR OWN** Jupyter Notebook server on Talon and how to access it from your computer.
+These are instructions on how to start a **YOUR OWN** Jupyter Notebook server on Talon and how to access it from your computer.
 
 ## First time ONLY
 
