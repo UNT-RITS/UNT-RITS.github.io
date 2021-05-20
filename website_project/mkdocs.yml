@@ -18,6 +18,7 @@ nav:
                 - Jupyter Notebook: jupyter/jupyter_notebook.md
                 - Jupyter Hub: jupyter/jupyter_hub.md
        - Rstudio: r/rstudio.md
+       - Shiny Server: shiny/shiny.md
        - PyCharm: pycharm/pycharm.md
        
     - Talon3 User Guide:
