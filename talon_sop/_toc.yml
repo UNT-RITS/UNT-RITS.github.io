@@ -1,0 +1,6 @@
+- file: 0_intro
+- file: 1_talon_cluster_overview
+- file: 2_bright_cluster_configuration
+- file: 3_adding_new_nodes
+- file: 4_slurm
+
