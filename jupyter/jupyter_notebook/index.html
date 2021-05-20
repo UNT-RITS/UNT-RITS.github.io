@@ -851,7 +851,7 @@
                 
                 
                 <h1 id="jupyter-notebook-on-talon-hpc">Jupyter Notebook on Talon HPC<a class="headerlink" href="#jupyter-notebook-on-talon-hpc" title="Permanent link">&para;</a></h1>
-<p>These are instructions on how to start a <strong>YOUR OWN</strong> Jupyter Notebook server on Talon and how to access it from your computer.</p>
+<p>These are the instructions on how to start a <strong>YOUR OWN</strong> Jupyter Notebook server on Talon and how to access it from your computer.</p>
 <p>There are two ways you can run Jupyter Notebook, either as an</p>
 <ul>
 <li>
@@ -861,10 +861,7 @@
 </ul>
 </li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Interactive notebooks maybe terminated if using too much computing resources, taking too long, or taking too much memory. </p>
-</div>
+<p>!!! warning Interactive notebooks maybe terminated if using too much computing resources, taking too long, or taking too much memory.</p>
 <ul>
 <li>
 <p>Compute node job</p>
@@ -898,9 +895,9 @@
 <li>
 <p>Then enter a password. This will be the password necessary to access Jupyter Notebook. THIS IS NOT YOUR EUID PASSWORD.</p>
 <p>You will have to type twice, for:</p>
-<p><div class="highlight"><pre><span></span><code>$ Enter password:
+<div class="highlight"><pre><span></span><code>$ Enter password:
 </code></pre></div>
-And</p>
+<p>And</p>
 <div class="highlight"><pre><span></span><code>$ Verify password:
 </code></pre></div>
 <p>After you entered the password twice you should see a message:</p>
@@ -915,13 +912,15 @@ And</p>
 <ul>
 <li>
 <p>Login to a Visualization login nodes. Use ONE of the following:</p>
-<div class="highlight"><pre><span></span><code>$ ssh YOUR_EUID@vis.acs.unt.edu
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ssh YOUR_EUID@vis.acs.unt.edu
 </code></pre></div>
+</td></tr></table>
 </li>
 <li>
 <p>Load the appropriate module:</p>
-<div class="highlight"><pre><span></span><code>$ module load python/3.6.5
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">module</span> <span class="nb">load</span> <span class="n">python</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">5</span>
 </code></pre></div>
+</td></tr></table>
 </li>
 <li>
 <p>Launch Jupyter Notebook:</p>
@@ -939,11 +938,13 @@ And</p>
 <li>
 <p>Forward Jupyter Notebook to your local machine browser</p>
 <p>Now you need to open a new terminal window and use the following command:</p>
-<div class="highlight"><pre><span></span><code>$ ssh -L YOUR_PORT_NUMBER:localhost:YOUR_PORT_NUMBER YOUR_EUDI@vis.acs.unt.edu
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ssh -L YOUR_PORT_NUMBER:localhost:YOUR_PORT_NUMBER YOUR_EUDI@vis.acs.unt.edu
 </code></pre></div>
+</td></tr></table>
 <p>In this example the port number is 8891, so I will use:</p>
-<div class="highlight"><pre><span></span><code>ssh -L 8891:localhost:8891 EUID@vis.acs.unt.edu
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">ssh -L 8891:localhost:8891 EUID@vis.acs.unt.edu</span>
 </code></pre></div>
+</td></tr></table>
 <p>You will replace this number with the one generated in your Jupyter Notebook terminal window.</p>
 <p>This will forward the port of the Jupyter Notebook running on talon to your local machine.</p>
 <p>Double check&hellip;</p>
@@ -953,25 +954,28 @@ And</p>
 </ul>
 <p><img alt="alt text" src="../images/screenshoot_jupyter.png" /></p>
 <ul>
-<li>Another terminal that you used to login with like in <strong>1.4 Forward Jupyter Notebook to your local machine browser</strong>:
-<div class="highlight"><pre><span></span><code>$ ssh -L YOUR_PORT_NUMBER:localhost:YOUR_PORT_NUMBER YOUR_EUDI@vis.acs.unt.edu
-</code></pre></div></li>
+<li>Another terminal that you used to login with like in <strong>1.4 Forward Jupyter Notebook to your local machine browser</strong>:</li>
 </ul>
+<div class="highlight"><pre><span></span><code>$ ssh -L YOUR_PORT_NUMBER:localhost:YOUR_PORT_NUMBER YOUR_EUDI@vis.acs.unt.edu
+</code></pre></div>
 <p>These 2 terminal are the ones keeping your Jupyter Notebook alive and running on your local machine!</p>
 </li>
 <li>
 <p>Access your Jupyter Notebook:</p>
 <p>Now to access the Jupyter Notebook, open any browser (Chrome,Mozilla etc) and type:</p>
-<div class="highlight"><pre><span></span><code>http://localhost:YOUR_PORT_NUMBER
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">http://localhost:YOUR_PORT_NUMBER</span>
 </code></pre></div>
+</td></tr></table>
 <p>In my case, my port number is 8891 so I will have to use:</p>
-<p><div class="highlight"><pre><span></span><code>http://localhost:8891
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">http://localhost:8891</span>
 </code></pre></div>
-You will see a webpage like this:</p>
+</td></tr></table>
+<p>You will see a webpage like this:</p>
 <p><img alt="alt text" src="../images/screenshot_loginwindow_jupyter.png" /></p>
 <p>This is where you will enter your password that you created when you used</p>
-<div class="highlight"><pre><span></span><code>$ jupyter notebook password
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ jupyter notebook password
 </code></pre></div>
+</td></tr></table>
 <p>Now you are inside your Jupyer Notebook on your local machine browser that runs on Talon! Cool!</p>
 <p>This is how mine looks like after login:</p>
 <p><img alt="alt text" src="../images/screenshot_logged_jupyter.png" /></p>
@@ -982,13 +986,13 @@ You will see a webpage like this:</p>
 <ul>
 <li>
 <p>Login to Talon:</p>
-<div class="highlight"><pre><span></span><code>$ ssh YOUR_EUID@talon3.hpc.unt.edu
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ssh YOUR_EUID@talon3.hpc.unt.edu
 </code></pre></div>
+</td></tr></table>
 </li>
 <li>
 <p>Create and configure your .job file:</p>
-<p>Now you will need to create a .job file just like a batch submisison job (Check <a href="https://github.com/gmihaila/unt_hpc/tree/master/job_batch">this</a> out if not familiar with job submissions on Talon)
-Your .job file should look like this:</p>
+<p>Now you will need to create a .job file just like a batch submisison job (Check <a href="https://github.com/gmihaila/unt_hpc/tree/master/job_batch">this</a> out if not familiar with job submissions on Talon) Your .job file should look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH -p preproduction</span>
 <span class="c1">#SBATCH --qos general</span>
@@ -999,59 +1003,80 @@ module load python/3.6.5
 <span class="nb">unset</span> XDG_RUNTIME_DIR
 jupyter notebook --no-browser --ip<span class="o">=</span><span class="m">0</span>.0.0.0
 </code></pre></div>
-<p>The first 6 lines are configurable to anything you want. See <a href="https://hpc.unt.edu/userguide#Slurm_tutorials">Talon 3 job submission</a> for more details.  You can add/remove resources or functionality to it just like with any job file.</p>
+<p>The first 6 lines are configurable to anything you want. See <a href="https://hpc.unt.edu/userguide#Slurm_tutorials">Talon 3 job submission</a> for more details. You can add/remove resources or functionality to it just like with any job file.</p>
 <p>The part that is very important for Jupyter Notebook in the job file is:</p>
-<div class="highlight"><pre><span></span><code>  module load python/3.6.5
-  unset XDG_RUNTIME_DIR
-  jupyter notebook --no-browser --ip=0.0.0.0
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>  <span class="n">module</span> <span class="nb">load</span> <span class="n">python</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">5</span>
+  <span class="n">unset</span> <span class="n">XDG_RUNTIME_DIR</span>
+  <span class="n">jupyter</span> <span class="n">notebook</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">browser</span> <span class="o">--</span><span class="n">ip</span><span class="o">=</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span>
 </code></pre></div>
+</td></tr></table>
 <p>Once you have the job file ready, you can launch it just like any job file on talon</p>
-<div class="highlight"><pre><span></span><code>  $ sbatch YOUR_JOB_FILE.job
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">  $ sbatch YOUR_JOB_FILE.job</span>
 </code></pre></div>
+</td></tr></table>
 <p>This will launch your job supporting Jupyter Notebooks. We need to find the compute node where the notebooks is running. For this we will use the output file generated by the job file (For example: job_JOB_ID.out) should look like:</p>
-<div class="highlight"><pre><span></span><code>[I 12:33:10.043 NotebookApp] Serving notebooks from local directory: /home/gm0234
-[I 12:33:10.043 NotebookApp] The Jupyter Notebook is running at:
-[I 12:33:10.043 NotebookApp] http://(YOUR_NODE_ADDRESS or 127.0.0.1):YOUR_PORT_NUMBER/
-[I 12:33:10.043 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">[I 12:33:10.043 NotebookApp] Serving notebooks from local directory: /home/gm0234</span>
+<span class="err">[I 12:33:10.043 NotebookApp] The Jupyter Notebook is running at:</span>
+<span class="err">[I 12:33:10.043 NotebookApp] http://(YOUR_NODE_ADDRESS or 127.0.0.1):YOUR_PORT_NUMBER/</span>
+<span class="err">[I 12:33:10.043 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span>
 </code></pre></div>
+</td></tr></table>
 <p>As an example:</p>
-<div class="highlight"><pre><span></span><code>[I 12:33:10.043 NotebookApp] Serving notebooks from local directory: /home/gm0234
-[I 12:33:10.043 NotebookApp] The Jupyter Notebook is running at:
-[I 12:33:10.043 NotebookApp] http://(c32-9-29 or 127.0.0.1):8888/
-[I 12:33:10.043 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">[I 12:33:10.043 NotebookApp] Serving notebooks from local directory: /home/gm0234</span>
+<span class="err">[I 12:33:10.043 NotebookApp] The Jupyter Notebook is running at:</span>
+<span class="err">[I 12:33:10.043 NotebookApp] http://(c32-9-29 or 127.0.0.1):8888/</span>
+<span class="err">[I 12:33:10.043 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span>
 </code></pre></div>
+</td></tr></table>
 <p>The part we care about is:</p>
-<div class="highlight"><pre><span></span><code>[I 12:33:10.043 NotebookApp] http://(c32-9-29 or 127.0.0.1):8888/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">[I 12:33:10.043 NotebookApp] http://(c32-9-29 or 127.0.0.1):8888/</span>
 </code></pre></div>
+</td></tr></table>
 <p>More exactly:</p>
-<div class="highlight"><pre><span></span><code>(c32-9-29 or 127.0.0.1):8888/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">(c32-9-29 or 127.0.0.1):8888/</span>
 </code></pre></div>
-<p>From this we know the <strong>YOUR_NODE_ADDRESS</strong>: </p>
-<p><div class="highlight"><pre><span></span><code>c32-9-29
+</td></tr></table>
+<p>From this we know the <strong>YOUR_NODE_ADDRESS</strong>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">c32-9-29</span>
 </code></pre></div>
-And <strong>YOUR_PORT_NUMBER</strong>:</p>
-<div class="highlight"><pre><span></span><code>8888
+</td></tr></table>
+<p>And <strong>YOUR_PORT_NUMBER</strong>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">8888</span>
 </code></pre></div>
+</td></tr></table>
 <p>Having these two (YOUR_NODE_ADDRESS and YOUR_PORT_NUMBER) we can open a new terminal and login to forward that address to your local machine:</p>
-<div class="highlight"><pre><span></span><code>$ ssh -L YOUR_PORT_NUMBER:YOUR_NODE_ADDRESS:YOUR_PORT_NUMBER YOUR_EUID@vis.acs.unt.edu
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ssh -L YOUR_PORT_NUMBER:YOUR_NODE_ADDRESS:YOUR_PORT_NUMBER YOUR_EUID@vis.acs.unt.edu
 </code></pre></div>
+</td></tr></table>
 <p>For this example:</p>
-<div class="highlight"><pre><span></span><code>$ ssh -L 8888:c32-9-29:8888 YOUR_EUID@vis.acs.unt.edu
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ssh -L <span class="m">8888</span>:c32-9-29:8888 YOUR_EUID@vis.acs.unt.edu
 </code></pre></div>
+</td></tr></table>
 </li>
 <li>
 <p>Access your Jupyter Notebook:</p>
 <p>Now to access the Jupyter Notebook, open any browser (Chrome,Mozilla etc) and type:</p>
-<div class="highlight"><pre><span></span><code>http://localhost:YOUR_PORT_NUMBER
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">http://localhost:YOUR_PORT_NUMBER</span>
 </code></pre></div>
+</td></tr></table>
 <p>In my case, my port number is 8888 so I will have to use:</p>
-<p><div class="highlight"><pre><span></span><code>http://localhost:8888
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c">http://localhost:8888</span>
 </code></pre></div>
-You will see a webpage like this:</p>
+</td></tr></table>
+<p>You will see a webpage like this:</p>
 <p><img alt="alt text" src="../images/screenshot_loginwindow_jupyter.png" /></p>
 <p>This is where you will enter your password that you created when you used</p>
-<div class="highlight"><pre><span></span><code>$ jupyter notebook password
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ jupyter notebook password
 </code></pre></div>
+</td></tr></table>
 <p>Now you are inside your Jupyer Notebook on your local machine browser that runs on Talon! Cool!</p>
 <p>This is how mine looks like after login:</p>
 <p><img alt="alt text" src="../images/screenshot_logged_jupyter.png" /></p>
@@ -1059,7 +1084,7 @@ You will see a webpage like this:</p>
 </li>
 </ul>
 <h2 id="notebooks-on-gpus-use-gpus-on-your-notebook">Notebooks on GPUs (use GPUs on your notebook)<a class="headerlink" href="#notebooks-on-gpus-use-gpus-on-your-notebook" title="Permanent link">&para;</a></h2>
-<p>Follow same steps as <code>Run as a job file</code> but use a different <code>.job</code> file: </p>
+<p>Follow same steps as <code>Run as a job file</code> but use a different <code>.job</code> file:</p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH -J jupyter</span>
 <span class="c1">#SBATCH -o job_%j.out</span>
@@ -1076,7 +1101,7 @@ module load pytorch/1.0.1
 <span class="nb">unset</span> XDG_RUNTIME_DIR
 jupyter notebook --no-browser --ip<span class="o">=</span><span class="m">0</span>.0.0.0
 </code></pre></div>
-<p>The first 6 lines are configurable to anything you want. See <a href="https://hpc.unt.edu/userguide#Slurm_tutorials">Talon 3 job submission</a> for more details.  You can add/remove resources or functionality to it just like with any job file.</p>
+<p>The first 6 lines are configurable to anything you want. See <a href="https://hpc.unt.edu/userguide#Slurm_tutorials">Talon 3 job submission</a> for more details. You can add/remove resources or functionality to it just like with any job file.</p>
                 
               
               
