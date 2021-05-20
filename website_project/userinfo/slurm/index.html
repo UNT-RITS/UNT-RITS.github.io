@@ -1,0 +1,1460 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../images/logo.svg">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
+    
+    
+      
+        <title>SLURM queuing system - UNT Talon3 HPC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:""}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/unibe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#slurm-job-scheduler" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-header__button md-logo" aria-label="UNT Talon3 HPC Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UNT Talon3 HPC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SLURM queuing system
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UNT Talon3 HPC Documentation" class="md-nav__button md-logo" aria-label="UNT Talon3 HPC Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.svg" alt="logo">
+
+    </a>
+    UNT Talon3 HPC Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../newaccount/" class="md-nav__link">
+        Talon3 Account Information
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Talon3 System Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Talon3 System Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Talon3 System Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/nodes/" class="md-nav__link">
+        Compute Nodes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/filesystem/" class="md-nav__link">
+        File System
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../under_construction/" class="md-nav__link">
+        Network
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/cite/" class="md-nav__link">
+        Citing Talon Work
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Accessing Talon3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Accessing Talon3" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Accessing Talon3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../login/" class="md-nav__link">
+        Logging into Talon3
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal/ssh/" class="md-nav__link">
+        SSH Terminal
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Jupyter
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Jupyter" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Jupyter
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter/jupyter_notebook/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jupyter/jupyter_hub/" class="md-nav__link">
+        Jupyter Hub
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../r/rstudio/" class="md-nav__link">
+        Rstudio
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shiny/shiny/" class="md-nav__link">
+        Shiny Server
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pycharm/pycharm/" class="md-nav__link">
+        PyCharm
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Talon3 User Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Talon3 User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Talon3 User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SLURM queuing system
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SLURM queuing system
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-information-about-slurm" class="md-nav__link">
+    Basic Information about Slurm
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Information about Slurm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slurm-tutorials-and-commands" class="md-nav__link">
+    Slurm Tutorials and Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talon3-job-submission" class="md-nav__link">
+    Talon3 Job Submission
+  </a>
+  
+    <nav class="md-nav" aria-label="Talon3 Job Submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partitions" class="md-nav__link">
+    Partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qos" class="md-nav__link">
+    QOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-slurm-information" class="md-nav__link">
+    Common Slurm information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm-example-commands" class="md-nav__link">
+    SLURM Example Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-slurm-job-script" class="md-nav__link">
+    The SLURM Job Script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-job-scripts" class="md-nav__link">
+    Example job Scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-sessions" class="md-nav__link">
+    Interactive sessions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        Managing Files
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modules/" class="md-nav__link">
+        Environment Modules
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Using Software
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Using Software" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Using Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      <label class="md-nav__link" for="__nav_6_1">
+        Building Software
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Building Software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Building Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../under_construction/" class="md-nav__link">
+        Compiling Procedure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2" type="checkbox" id="__nav_6_1_2" >
+      
+      <label class="md-nav__link" for="__nav_6_1_2">
+        High-level languages
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="High-level languages" data-md-level="3">
+        <label class="md-nav__title" for="__nav_6_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          High-level languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2_1" type="checkbox" id="__nav_6_1_2_1" >
+      
+      <label class="md-nav__link" for="__nav_6_1_2_1">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Python" data-md-level="4">
+        <label class="md-nav__title" for="__nav_6_1_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python_info/" class="md-nav__link">
+        Info
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/code_samples/" class="md-nav__link">
+        Code Samples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tensorflow/" class="md-nav__link">
+        Tensorflow
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/pytorch/" class="md-nav__link">
+        PyTorch
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sci_soft/sci_soft/" class="md-nav__link">
+        Scientific Software
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sci_soft/containers/" class="md-nav__link">
+        Containers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Other NTSC Info
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Other NTSC Info" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Other NTSC Info
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/ntscmeeting/" class="md-nav__link">
+        NTSC Meetings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-information-about-slurm" class="md-nav__link">
+    Basic Information about Slurm
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Information about Slurm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slurm-tutorials-and-commands" class="md-nav__link">
+    Slurm Tutorials and Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#talon3-job-submission" class="md-nav__link">
+    Talon3 Job Submission
+  </a>
+  
+    <nav class="md-nav" aria-label="Talon3 Job Submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partitions" class="md-nav__link">
+    Partitions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qos" class="md-nav__link">
+    QOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-slurm-information" class="md-nav__link">
+    Common Slurm information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm-example-commands" class="md-nav__link">
+    SLURM Example Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-slurm-job-script" class="md-nav__link">
+    The SLURM Job Script
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-job-scripts" class="md-nav__link">
+    Example job Scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-sessions" class="md-nav__link">
+    Interactive sessions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="slurm-job-scheduler">Slurm Job Scheduler<a class="headerlink" href="#slurm-job-scheduler" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>In an HPC cluster, the users&rsquo; tasks to be done on compute nodes are controlled by a batch queuing system. Queuing systems manage job requests (shell scripts generally referred to as jobs) submitted by all users on Talon 3. In other words, to get your computations done by the cluster, you must submit a job request to a specific batch queue. The scheduler will assign your job to a compute node in the order determined by the policy on that queue and the availability of an idle compute node. Currently, Talon 3 resources have several policies in place to help guarantee fair resource utilization from all users. </p>
+<p>The <a href="https://slurm.schedmd.com/documentation.html">SLURM Workload Manger</a> is userd to control how jobs are dispatched on the compute nodes.</p>
+<h2 id="basic-information-about-slurm">Basic Information about Slurm<a class="headerlink" href="#basic-information-about-slurm" title="Permanent link">&para;</a></h2>
+<p>The <strong>Slurm Workload Manager</strong> (formally known as Simple Linux Utility for Resource Management or SLURM), or Slurm, is a free and open-source job scheduler for Linux and Unix-like kernels, used by many of the world&rsquo;s supercomputers and computer clusters. It provides three key functions. First, it allocates exclusive and/or non-exclusive access to resources (computer nodes) to users for some duration of time so they can perform work. Second, it provides a framework for starting, executing, and monitoring work (typically a parallel job such as MPI) on a set of allocated nodes. Finally, it arbitrates contention for resources by managing a queue of pending jobs. Slurm is the workload manager on about 60% of the TOP500 supercomputers, including Tianhe-2 that, until 2016, was the world&rsquo;s fastest computer. Slurm uses a best fit algorithm based on Hilbert curve scheduling or fat tree network topology in order to optimize locality of task assignments on parallel computers.</p>
+<h3 id="slurm-tutorials-and-commands">Slurm Tutorials and Commands<a class="headerlink" href="#slurm-tutorials-and-commands" title="Permanent link">&para;</a></h3>
+<p>A Quick-Start Guide for those unfamiliar with Slurm can be found <a href="https://slurm.schedmd.com/quickstart.html">here</a></p>
+<p>Slurm Tutorial Videos can be found <a href="https://slurm.schedmd.com/tutorials.html">here</a> for additional information</p>
+<h2 id="talon3-job-submission">Talon3 Job Submission<a class="headerlink" href="#talon3-job-submission" title="Permanent link">&para;</a></h2>
+<h3 id="partitions">Partitions<a class="headerlink" href="#partitions" title="Permanent link">&para;</a></h3>
+<p>Currently on Talon3, there are 4 partitions for users to submit their jobs.</p>
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Node Type</th>
+<th>Max Nodes</th>
+<th>Max Duration</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>preproduction</td>
+<td>R420</td>
+<td>22</td>
+<td><strong>See QOS</strong></td>
+<td>Available to any Talon3 user</td>
+</tr>
+<tr>
+<td>production</td>
+<td>C6320</td>
+<td>22</td>
+<td>**See QOS **</td>
+<td>Available to production users</td>
+</tr>
+<tr>
+<td>bigmem</td>
+<td>R720</td>
+<td>2</td>
+<td>1 weeks</td>
+<td>Available to any Talon3 user</td>
+</tr>
+<tr>
+<td>gpu</td>
+<td>R730</td>
+<td>3</td>
+<td>1 weeks</td>
+<td>Available to any Talon3 user</td>
+</tr>
+</tbody>
+</table>
+<p>Users have access the production partition if their allocation reaches 300,000 CPU hours within the current and previous FY OR they have an active external funding source.</p>
+<p>If you require more resources, you may submit a support ticket to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#83;&#99;&#105;&#67;&#111;&#109;&#112;&#45;&#83;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#117;&#110;&#116;&#46;&#101;&#100;&#117;">&#83;&#99;&#105;&#67;&#111;&#109;&#112;&#45;&#83;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#117;&#110;&#116;&#46;&#101;&#100;&#117;</a> and the Talon3 admin staff will evaaluate your request.</p>
+<h3 id="qos">QOS<a class="headerlink" href="#qos" title="Permanent link">&para;</a></h3>
+<p>The Quality of Service, QOS, sets the priority of the job to the queuing system. There are <strong>three</strong> QOS&rsquo;s under the <strong>preproduction</strong> and <strong>production</strong> partitions.</p>
+<p>For the <strong>bigmem</strong> and <strong>gpu</strong> partition, you do NOT need to specify QOS.</p>
+<table>
+<thead>
+<tr>
+<th>QOS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>debug</td>
+<td><ul><li>Two hour limit</li><li>two compute nodes</li><li>Highest priority</li></ul></td>
+</tr>
+<tr>
+<td>general</td>
+<td><ul><li>72 hour limit</li><li>22 compute nodes</li><li>Medium priority</li></ul></td>
+</tr>
+<tr>
+<td>large</td>
+<td><ul><li>3 week limit</li><li>22 compute nodes</li><li>lowest priority</li></ul></td>
+</tr>
+</tbody>
+</table>
+<h3 id="common-slurm-information">Common Slurm information<a class="headerlink" href="#common-slurm-information" title="Permanent link">&para;</a></h3>
+<p>The following list frequently used SLURM commands</p>
+<table>
+<thead>
+<tr>
+<th>Slurm Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sbatch script.job</td>
+<td>submit a job</td>
+</tr>
+<tr>
+<td>squeue jobid</td>
+<td>display job status</td>
+</tr>
+<tr>
+<td>squeue -u $USER</td>
+<td>display status of user&rsquo;s jobs</td>
+</tr>
+<tr>
+<td>scancel jobid</td>
+<td>canncel a job</td>
+</tr>
+<tr>
+<td>scontrol update</td>
+<td>modify a <strong>pending</strong> job</td>
+</tr>
+</tbody>
+</table>
+<p>The following lists command SLURM variables that you can use in your job scripts</p>
+<table>
+<thead>
+<tr>
+<th>SLURM Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$SLURM_SUBMIT_DIR</td>
+<td>current working directory of the submitting client</td>
+</tr>
+<tr>
+<td>$SLURM_JOB_ID</td>
+<td>unique identifier assigned when the job was submitted</td>
+</tr>
+<tr>
+<td>$SLURM_NTASKS</td>
+<td>number of CPUs in use by a parallel job</td>
+</tr>
+<tr>
+<td>$SLURM_NNODES</td>
+<td>number of hosts in use by a parallel job</td>
+</tr>
+<tr>
+<td>$SLURM_ARRAY_TASK_ID</td>
+<td>index number of the current array job task</td>
+</tr>
+<tr>
+<td>$SLURM_JOB_CPUS_PER_NODE</td>
+<td>number of CPU cores per node</td>
+</tr>
+<tr>
+<td>$SLURM_JOB_NAME</td>
+<td>Name of JOB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slurm-example-commands">SLURM Example Commands<a class="headerlink" href="#slurm-example-commands" title="Permanent link">&para;</a></h3>
+<p>Submitting a job</p>
+<p><div class="highlight"><pre><span></span><code>sbatch slurm.job
+</code></pre></div>
+Where <strong>slurm.job</strong> is the name of the job script</p>
+<p>List all current jobs that a user has in the queue
+<div class="highlight"><pre><span></span><code>squeue -u $USER
+</code></pre></div></p>
+<p>Get job details
+<div class="highlight"><pre><span></span><code>scontrol show job 106
+</code></pre></div>
+where 106 is the JOBID number</p>
+<p>Kill a job that is in the queue
+<div class="highlight"><pre><span></span><code>scancel 106
+</code></pre></div>
+where 106 is t he JOBID number of the job you wan to be killed</p>
+<p>Hold a job in the queue
+<div class="highlight"><pre><span></span><code>scontrol hold 106
+</code></pre></div></p>
+<p>Release a held job in the queue
+<div class="highlight"><pre><span></span><code>scontrol release 106
+</code></pre></div></p>
+<h3 id="the-slurm-job-script">The SLURM Job Script<a class="headerlink" href="#the-slurm-job-script" title="Permanent link">&para;</a></h3>
+<p>The job script is a file that has the SLURM information for sbatch.</p>
+<p>The following table list command sbatch options</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-p</td>
+<td><em>parition_name</em></td>
+<td>submits to a certain <em>[arition_name</em></td>
+</tr>
+<tr>
+<td>-J</td>
+<td><em>job_name</em></td>
+<td>defines the name of the job</td>
+</tr>
+<tr>
+<td>-o</td>
+<td><em>output_name</em></td>
+<td>defines file name to direct standard output from job <br> Default <em>slurm-JOBID.out</em></td>
+</tr>
+<tr>
+<td>-e</td>
+<td><em>error_name</em></td>
+<td>defines file name to direct error output <br> Defalut <em>output_name</em></td>
+</tr>
+<tr>
+<td>&ndash;qos</td>
+<td><em>QOS_name</em></td>
+<td>defines the requested QOS</td>
+</tr>
+<tr>
+<td>&ndash;exclusive</td>
+<td>N/A</td>
+<td>sets exclusive job, not allowing other jobs to share on compute node</td>
+</tr>
+<tr>
+<td>-t</td>
+<td><em>time</em></td>
+<td>set up the wall time limit for job in hh<img alt="🇲🇲" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1f2-1f1f2.svg" title=":mm:" />ss</td>
+</tr>
+<tr>
+<td>-N</td>
+<td><em>num_nodes</em></td>
+<td>Definies the total number of compute nodes requested</td>
+</tr>
+<tr>
+<td>-n</td>
+<td><em>num_cores</em></td>
+<td>Definies the total number of cpu tasks requested</td>
+</tr>
+<tr>
+<td>&ndash;ntasks-per-node</td>
+<td><em>num_cpu_pernode</em></td>
+<td>Definies the number of cpu tasks PER node</td>
+</tr>
+<tr>
+<td>&ndash;mail-user</td>
+<td><em>user_email</em></td>
+<td>sets up email notification</td>
+</tr>
+<tr>
+<td>&ndash;mail-type</td>
+<td><em>mail_type</em></td>
+<td>Emails users when <em>mail_type</em> is: <ul><li><strong>begin</strong> A email will set when job starts</li><li><strong>end</strong> A email will set when job ends</li></ul></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-job-scripts">Example job Scripts<a class="headerlink" href="#example-job-scripts" title="Permanent link">&para;</a></h3>
+<p>Simple serial job script example</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+######################################
+# Example of a SLURM job script for Talon3
+# Job Name: Sample_Job
+# Number of cores: 1
+# Number of nodes: 1
+# QOS: general
+# Run time: 12 hrs
+######################################
+#SBATCH -J Sample_Job
+#SBATCH -o Sample_job.o%j
+#SBATCH -p preproduction
+#SBATCH --qos general
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 12:00:00
+
+### Loading modules 
+module load intel/compilers/18.0.1
+
+./a.out &gt; outfile.out
+</code></pre></div>
+<p>Simple parallel MPI job script example</p>
+<p>When submitting a MPI job, make sure you load the module and use <em>mpirun</em> to launch your application
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+######################################
+# Example of a SLURM job script for Talon3
+# Job Name: Sample_Job
+# Number of cores: 28
+# Number of nodes: 1
+# QOS: general
+# Run time: 12 hrs
+######################################
+#SBATCH -J Sample_Job
+#SBATCH -o Sample_job.o%j
+#SBATCH -p preproduction
+#SBATCH --qos general
+#SBATCH -N 1
+#SBATCH -n 16
+#SBATCH --ntasks-per-node 16
+#SBATCH -t 12:00:00
+
+### Loading modules
+module load PackageEnv/intel17.0.4_gcc8.1.0_MKL_IMPI_AVX
+
+### Use mpirun to run parallel jobs
+mpirun ./a.out &gt; outfile.out
+</code></pre></div></p>
+<p>Larger MPI job script example
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+######################################
+# Example of a SLURM job script for Talon3
+# Job Name: Sample_Job
+# Number of cores: 112
+# Number of nodes: 4
+# QOS: general
+# Run time: 12 hrs
+######################################
+#SBATCH -J Sample_Job
+#SBATCH -o Sample_job.o%j
+#SBATCH -p preproduction
+#SBATCH --qos general
+#SBATCH -N 4
+#SBATCH -n 64
+#SBATCH --ntasks-per-node 16
+#SBATCH -t 12:00:00
+
+### Loading modules
+module load PackageEnv/intel17.0.4_gcc8.1.0_MKL_IMPI_AVX
+
+## Use mpirun for MPI jobs
+mpirun ./a.out &gt; outfile.out
+</code></pre></div></p>
+<p>Big Memory job script example
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+######################################
+# Example of a SLURM job script for Talon3
+# Job Name: Sample_Job
+# Number of MPI tasks: 32
+# Number of nodes: 1
+# Run time: 12 hrs
+######################################
+#SBATCH -J Sample_Job
+#SBATCH -o Sample_job.o%j
+#SBATCH -p bigmem
+#SBATCH -N 1
+#SBATCH --ntasks-per-node 32
+#SBATCH -t 12:00:00
+
+### Loading modules
+module load PackageEnv/intel17.0.4_gcc8.1.0_MKL_IMPI_AVX
+
+mpirun ./a.out &gt; outfile.out
+</code></pre></div></p>
+<p>CUDA parallel GPU job script example
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+######################################
+# Example of a SLURM job script for Talon3
+# Job Name: Sample_Job
+# Number of devices(GPUs): 2
+# Number of nodes: 1
+# QOS: general
+# Run time: 12 hrs
+######################################
+#SBATCH -J Sample_Job
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:2
+#SBATCH -t 12:00:00
+#SBATCH -p gpu
+
+### execute code
+./a.out -numdevices=2
+</code></pre></div></p>
+<h2 id="interactive-sessions">Interactive sessions<a class="headerlink" href="#interactive-sessions" title="Permanent link">&para;</a></h2>
+<p>Interactive job sessions can be used on Talon if you need to compile or test software. Interactive jobs will start a command line session on a compute node. If you have to run large tasks or processes, running an interactive job will allow you to run these tasks without using the login nodes.</p>
+<p>An example command of starting an interactive session is shown below:</p>
+<div class="highlight"><pre><span></span><code>$ srun -p preproduction --qos debug -N 1 -n 16 -t 2:00:00 --pty bash
+srun: job 55692 queued and waiting for resources
+srun: job 55692 has been allocated resources
+[c64-6-32 ~]$ python test.py   # Run python on compute node
+[c64-6-32 ~]$ exit             # Exit interactive job
+</code></pre></div>
+<p>This launches an interactive job session and launches a bash shell to a compute node. From there, you can execute software and shell commands that would otherwise not be allowed on the Talon login nodes.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../pycharm/pycharm/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              PyCharm
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../files/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Managing Files
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; North Texas Scientific Computing, University of North Texas
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/UNT_RITS" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/UNT-RITS" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.4fa0e4ee.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1d3bfcf1.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
