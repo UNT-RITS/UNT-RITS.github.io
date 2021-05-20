@@ -14,7 +14,7 @@
     
     
       
-        <title>PyTorch - UNT Talon3 HPC Documentation</title>
+        <title>Shiny Server - UNT Talon3 HPC Documentation</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#were-working-hard-here" class="md-skip">
+        <a href="#shiny-server-on-vis-nodes" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PyTorch
+              Shiny Server
             
           </span>
         </div>
@@ -281,12 +281,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Accessing Talon3
@@ -389,11 +391,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../shiny/shiny/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Shiny Server
       </a>
+      
     </li>
   
 
@@ -488,14 +500,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         Using Software
@@ -511,14 +521,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
       
       <label class="md-nav__link" for="__nav_6_1">
         Building Software
@@ -546,14 +554,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2" type="checkbox" id="__nav_6_1_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2" type="checkbox" id="__nav_6_1_2" >
       
       <label class="md-nav__link" for="__nav_6_1_2">
         High-level languages
@@ -569,14 +575,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2_1" type="checkbox" id="__nav_6_1_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1_2_1" type="checkbox" id="__nav_6_1_2_1" >
       
       <label class="md-nav__link" for="__nav_6_1_2_1">
         Python
@@ -594,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python_info/" class="md-nav__link">
+      <a href="../../python/python_info/" class="md-nav__link">
         Info
       </a>
     </li>
@@ -606,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code_samples/" class="md-nav__link">
+      <a href="../../python/code_samples/" class="md-nav__link">
         Code Samples
       </a>
     </li>
@@ -618,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tensorflow/" class="md-nav__link">
+      <a href="../../python/tensorflow/" class="md-nav__link">
         Tensorflow
       </a>
     </li>
@@ -628,21 +632,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../python/pytorch/" class="md-nav__link">
         PyTorch
       </a>
-      
     </li>
   
 
@@ -779,7 +773,10 @@
               
                 
                 
-                <h1 id="were-working-hard-here">We&rsquo;re working hard here!<a class="headerlink" href="#were-working-hard-here" title="Permanent link">&para;</a></h1>
+                <h1 id="shiny-server-on-vis-nodes">Shiny Server on Vis-nodes<a class="headerlink" href="#shiny-server-on-vis-nodes" title="Permanent link">&para;</a></h1>
+<p>Shiny server is accessed on port :3838</p>
+<p>For example:
+vis.acs.unt.edu:3838/projects </p>
                 
               
               
@@ -798,7 +795,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../tensorflow/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../r/rstudio/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -807,19 +804,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Tensorflow
+              Rstudio
             </div>
           </div>
         </a>
       
       
-        <a href="../../sci_soft/sci_soft/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../pycharm/pycharm/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Scientific Software
+              PyCharm
             </div>
           </div>
           <div class="md-footer__button md-icon">
