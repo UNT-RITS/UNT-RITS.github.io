@@ -42,6 +42,11 @@ nav:
             - ls: linux/ls.md
             - screen: linux/screen.md 
             - wget: linux/wget.md
+            - free: linux/free.md
+            - watch: watch/watch.md
+            - cp:
+            - rm:
+            - ln:
     
         - Containers: sci_soft/containers.md
 
