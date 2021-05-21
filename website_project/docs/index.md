@@ -4,10 +4,8 @@
 	Walk-in and in-person appointments are limited to favor virtual appointments via Zoom, phone, or other means of online communication. 
 	Please send an email to SciComp-Support@unt.edu to schedule an appointment with a NTSC staff member. Thank you for your understanding.
 
-!!! info "Recent Updates 11/2020"
+!!! info "Recent Updates 5/21/2021"
 	* New Julia version 1.5.2 
-	* Check out info for Nov TUG meeting
-
 
 ![Talon_pic](images/talon-green-1200x300.png)
 

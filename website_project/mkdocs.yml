@@ -37,13 +37,15 @@ nav:
                                 - PyTorch: python/pytorch.md
 
         - Scientific Software: sci_soft/sci_soft.md
-        - Containers: sci_soft/containers.md
-    
-    - Important Linux Commands and Utilities:
-        - ls: linux/ls.md
-        - screen: linux/screen.md 
-        - wget: linux/wget.md
         
+        - Important Linux Commands and Utilities:
+            - ls: linux/ls.md
+            - screen: linux/screen.md 
+            - wget: linux/wget.md
+    
+        - Containers: sci_soft/containers.md
+
+
     - Other NTSC Info:
             - NTSC Meetings: other/ntscmeeting.md
             - Tutorials: tutorials/tutorials.md
